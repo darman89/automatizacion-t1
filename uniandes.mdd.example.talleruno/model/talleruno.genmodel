@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/uniandes.mdd.example.talleruno/src" modelPluginID="uniandes.mdd.example.talleruno"
+    modelName="Talleruno" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>talleruno.ecore</foreignModel>
+  <genPackages prefix="Talleruno" disposableProviderFactory="true" ecorePackage="talleruno.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//NombreAmbiente">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//NombreAmbiente/DESARROLLO"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//NombreAmbiente/PRUEBAS"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//NombreAmbiente/QA"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//NombreAmbiente/PRODUCCIÓN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//TamañoServidor">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//TamañoServidor/MICRO"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//TamañoServidor/SMALL"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//TamañoServidor/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//TamañoServidor/LARGE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//SistemaOperativo">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//SistemaOperativo/Windows"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//SistemaOperativo/Ubuntu1804"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//ManejadorNoSQL">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorNoSQL/MONGODB"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorNoSQL/CASSANDRA"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//ManejadorSQL">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorSQL/POSTGRESQL"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorSQL/MYSQL"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorSQL/ORACLE"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//ManejadorSQL/SQLSERVER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="talleruno.ecore#//Protocolo">
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//Protocolo/TCP"/>
+      <genEnumLiterals ecoreEnumLiteral="talleruno.ecore#//Protocolo/UDP"/>
+    </genEnums>
+    <genClasses ecoreClass="talleruno.ecore#//Proveedor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//Proveedor/parámetroConexión"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Proveedor/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//Proveedor/ambientesDespliegue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="talleruno.ecore#//ParámetroConexión"/>
+    <genClasses ecoreClass="talleruno.ecore#//UsuarioContraseña">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//UsuarioContraseña/usuario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//UsuarioContraseña/contraseña"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//Llave">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Llave/secreto"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//AmbienteDespliegue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//AmbienteDespliegue/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//AmbienteDespliegue/recursos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//AmbienteDespliegue/conexiones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//AmbienteDespliegue/seguridad"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//AmbienteDespliegue/vpc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="talleruno.ecore#//Recurso">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//Recurso/conexiones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Recurso/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Recurso/tamaño"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//Recurso/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//ServidorAplicaciones">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//ServidorAplicaciones/sistemaOperativo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="talleruno.ecore#//ServidorBaseDatos"/>
+    <genClasses ecoreClass="talleruno.ecore#//ServidorAlmacenamiento">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//ServidorAlmacenamiento/tamanioInicial"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//Conexión">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//Conexión/recursos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Conexión/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//BaseDatosSQL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//BaseDatosSQL/manejador"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//BaseDatosNoSQL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//BaseDatosNoSQL/manejador"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//InternetGateway">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//InternetGateway/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//VPC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//VPC/nombre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//VPC/recurso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//VPC/gruposeguridad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//VPC/subred"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//VPC/internetgateway"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//Subred">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Subred/CIDR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Subred/zonaDisponibilidad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//Subred/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//GrupoSeguridad">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//GrupoSeguridad/reglasEntrada"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference talleruno.ecore#//GrupoSeguridad/reglasSalida"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//GrupoSeguridad/descripción"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//GrupoSeguridad/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//Regla">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Regla/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Regla/protocolo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Regla/puerto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Regla/origen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Regla/descripción"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="talleruno.ecore#//MecanismoSeguridad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//MecanismoSeguridad/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="talleruno.ecore#//Infraestructura">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute talleruno.ecore#//Infraestructura/nombre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference talleruno.ecore#//Infraestructura/proveedor"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
