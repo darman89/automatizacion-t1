@@ -1014,219 +1014,45 @@ ruleVPC returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='VPC'
+		otherlv_0='tipo'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getVPCAccess().getVPCKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getVPCAccess().getTipoKeyword_0());
 		}
-		otherlv_1='{'
+		otherlv_1='='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVPCAccess().getLeftCurlyBracketKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVPCAccess().getEqualsSignKeyword_1());
 		}
-		(
-			otherlv_2='nombre'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getVPCAccess().getNombreKeyword_2_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getVPCAccess().getNombreEStringParserRuleCall_2_1_0());
-					}
-					lv_nombre_3_0=ruleEString
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getVPCRule());
-						}
-						set(
-							$current,
-							"nombre",
-							lv_nombre_3_0,
-							"org.xtext.example.mydsl.MyDsl.EString");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_4='recurso'
+		otherlv_2='VPC'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getVPCAccess().getRecursoKeyword_3());
+			newLeafNode(otherlv_2, grammarAccess.getVPCAccess().getVPCKeyword_2());
 		}
-		otherlv_5='('
+		otherlv_3='id'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVPCAccess().getLeftParenthesisKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVPCAccess().getIdKeyword_3());
+		}
+		otherlv_4='='
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVPCAccess().getEqualsSignKeyword_4());
 		}
 		(
 			(
+				{
+					newCompositeNode(grammarAccess.getVPCAccess().getNombreEStringParserRuleCall_5_0());
+				}
+				lv_nombre_5_0=ruleEString
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVPCRule());
+						$current = createModelElementForParent(grammarAccess.getVPCRule());
 					}
-				}
-				{
-					newCompositeNode(grammarAccess.getVPCAccess().getRecursoRecursoCrossReference_5_0());
-				}
-				ruleEString
-				{
+					set(
+						$current,
+						"nombre",
+						lv_nombre_5_0,
+						"org.xtext.example.mydsl.MyDsl.EString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		(
-			otherlv_7=','
-			{
-				newLeafNode(otherlv_7, grammarAccess.getVPCAccess().getCommaKeyword_6_0());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVPCRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getVPCAccess().getRecursoRecursoCrossReference_6_1_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)*
-		otherlv_9=')'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getVPCAccess().getRightParenthesisKeyword_7());
-		}
-		(
-			otherlv_10='gruposeguridad'
-			{
-				newLeafNode(otherlv_10, grammarAccess.getVPCAccess().getGruposeguridadKeyword_8_0());
-			}
-			otherlv_11='('
-			{
-				newLeafNode(otherlv_11, grammarAccess.getVPCAccess().getLeftParenthesisKeyword_8_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVPCRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getVPCAccess().getGruposeguridadGrupoSeguridadCrossReference_8_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_13=','
-				{
-					newLeafNode(otherlv_13, grammarAccess.getVPCAccess().getCommaKeyword_8_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getVPCRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getVPCAccess().getGruposeguridadGrupoSeguridadCrossReference_8_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_15=')'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getVPCAccess().getRightParenthesisKeyword_8_4());
-			}
-		)?
-		(
-			otherlv_16='subred'
-			{
-				newLeafNode(otherlv_16, grammarAccess.getVPCAccess().getSubredKeyword_9_0());
-			}
-			otherlv_17='('
-			{
-				newLeafNode(otherlv_17, grammarAccess.getVPCAccess().getLeftParenthesisKeyword_9_1());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVPCRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getVPCAccess().getSubredSubredCrossReference_9_2_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			(
-				otherlv_19=','
-				{
-					newLeafNode(otherlv_19, grammarAccess.getVPCAccess().getCommaKeyword_9_3_0());
-				}
-				(
-					(
-						{
-							if ($current==null) {
-								$current = createModelElement(grammarAccess.getVPCRule());
-							}
-						}
-						{
-							newCompositeNode(grammarAccess.getVPCAccess().getSubredSubredCrossReference_9_3_1_0());
-						}
-						ruleEString
-						{
-							afterParserOrEnumRuleCall();
-						}
-					)
-				)
-			)*
-			otherlv_21=')'
-			{
-				newLeafNode(otherlv_21, grammarAccess.getVPCAccess().getRightParenthesisKeyword_9_4());
-			}
-		)?
-		(
-			otherlv_22='internetgateway'
-			{
-				newLeafNode(otherlv_22, grammarAccess.getVPCAccess().getInternetgatewayKeyword_10_0());
-			}
-			(
-				(
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVPCRule());
-						}
-					}
-					{
-						newCompositeNode(grammarAccess.getVPCAccess().getInternetgatewayInternetGatewayCrossReference_10_1_0());
-					}
-					ruleEString
-					{
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-		)?
-		otherlv_24='}'
-		{
-			newLeafNode(otherlv_24, grammarAccess.getVPCAccess().getRightCurlyBracketKeyword_11());
-		}
 	)
 ;
 

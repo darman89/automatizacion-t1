@@ -67,14 +67,14 @@ Conexion returns Conexion:
 	'}';
 
 VPC returns VPC:
-	'VPC'
-	'{'
-		('nombre' nombre=EString)?
-		'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-		('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-		('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-		('internetgateway' internetgateway=[InternetGateway|EString])?
-	'}';
+	//'VPC'
+		'tipo' '=' 'VPC'
+		'id' '=' nombre=EString
+		//'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+		//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
+		//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
+		//('internetgateway' internetgateway=[InternetGateway|EString])?
+	;
 
 enum TamanioServidor returns TamanioServidor:
 				MICRO = 'MICRO' | SMALL = 'SMALL' | MEDIUM = 'MEDIUM' | LARGE = 'LARGE';

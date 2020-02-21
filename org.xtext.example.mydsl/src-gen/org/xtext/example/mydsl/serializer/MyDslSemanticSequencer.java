@@ -317,17 +317,16 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     VPC returns VPC
 	 *
 	 * Constraint:
-	 *     (
-	 *         nombre=EString? 
-	 *         recurso+=[Recurso|EString] 
-	 *         recurso+=[Recurso|EString]* 
-	 *         (gruposeguridad+=[GrupoSeguridad|EString] gruposeguridad+=[GrupoSeguridad|EString]*)? 
-	 *         (subred+=[Subred|EString] subred+=[Subred|EString]*)? 
-	 *         internetgateway=[InternetGateway|EString]?
-	 *     )
+	 *     nombre=EString
 	 */
 	protected void sequence_VPC(ISerializationContext context, VPC semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GramaticaPackage.Literals.VPC__NOMBRE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GramaticaPackage.Literals.VPC__NOMBRE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVPCAccess().getNombreEStringParserRuleCall_5_0(), semanticObject.getNombre());
+		feeder.finish();
 	}
 	
 	
