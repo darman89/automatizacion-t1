@@ -2389,9 +2389,9 @@ rule__VPC__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVPCAccess().getIdKeyword_5()); }
-	'id'
-	{ after(grammarAccess.getVPCAccess().getIdKeyword_5()); }
+	{ before(grammarAccess.getVPCAccess().getNombreKeyword_5()); }
+	'nombre'
+	{ after(grammarAccess.getVPCAccess().getNombreKeyword_5()); }
 )
 ;
 finally {
@@ -7088,9 +7088,9 @@ rule__ServidorAplicaciones__VpcAssignment_7
 	(
 		{ before(grammarAccess.getServidorAplicacionesAccess().getVpcVPCCrossReference_7_0()); }
 		(
-			{ before(grammarAccess.getServidorAplicacionesAccess().getVpcVPCIDTerminalRuleCall_7_0_1()); }
-			RULE_ID
-			{ after(grammarAccess.getServidorAplicacionesAccess().getVpcVPCIDTerminalRuleCall_7_0_1()); }
+			{ before(grammarAccess.getServidorAplicacionesAccess().getVpcVPCEStringParserRuleCall_7_0_1()); }
+			ruleEString
+			{ after(grammarAccess.getServidorAplicacionesAccess().getVpcVPCEStringParserRuleCall_7_0_1()); }
 		)
 		{ after(grammarAccess.getServidorAplicacionesAccess().getVpcVPCCrossReference_7_0()); }
 	)

@@ -12,7 +12,6 @@ import talleruno.VPC
 import talleruno.Infraestructura
 import talleruno.AmbienteDespliegue
 import org.eclipse.xtext.scoping.Scopes
-import talleruno.ServidorAplicaciones
 
 /**
  * This class contains custom scoping description.
@@ -23,9 +22,13 @@ import talleruno.ServidorAplicaciones
 class MyDslScopeProvider extends AbstractDeclarativeScopeProvider {
 	override public IScope getScope(EObject context, EReference reference)
 	{
-		if (context instanceof ServidorAplicaciones && reference.name == "vpc")
+		if (context instanceof Recurso && reference.name == "vpc")
 		{
+			System.out.println(context.eContainer.eContents.get(1));
 			return Scopes::scopeFor((context.eContainer.eContainer.eContents.get(1) as AmbienteDespliegue).vpc);
 		}
+		
+		System.out.println(":(");
+		return null;
 	}
 }

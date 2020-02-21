@@ -278,7 +278,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         tamanio=TamanioServidor? 
 	 *         sistemaOperativo=SistemaOperativo? 
 	 *         (conexiones+=[Conexion|EString] conexiones+=[Conexion|EString]*)? 
-	 *         vpc=[VPC|ID]
+	 *         vpc=[VPC|EString]
 	 *     )
 	 */
 	protected void sequence_ServidorAplicaciones(ISerializationContext context, ServidorAplicaciones semanticObject) {

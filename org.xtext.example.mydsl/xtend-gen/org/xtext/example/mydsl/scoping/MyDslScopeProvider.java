@@ -11,7 +11,7 @@ import org.eclipse.xtext.scoping.IScope;
 import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 import talleruno.AmbienteDespliegue;
-import talleruno.ServidorAplicaciones;
+import talleruno.Recurso;
 import talleruno.VPC;
 
 /**
@@ -24,14 +24,19 @@ import talleruno.VPC;
 public class MyDslScopeProvider extends AbstractDeclarativeScopeProvider {
   @Override
   public IScope getScope(final EObject context, final EReference reference) {
-    if (((context instanceof ServidorAplicaciones) && Objects.equal(reference.getName(), "vpc"))) {
+    if (((context instanceof Recurso) && Objects.equal(reference.getName(), "vpc"))) {
       EObject _eContainer = context.eContainer();
-      EObject _eContainer_1 = _eContainer.eContainer();
-      EList<EObject> _eContents = _eContainer_1.eContents();
+      EList<EObject> _eContents = _eContainer.eContents();
       EObject _get = _eContents.get(1);
-      EList<VPC> _vpc = ((AmbienteDespliegue) _get).getVpc();
+      System.out.println(_get);
+      EObject _eContainer_1 = context.eContainer();
+      EObject _eContainer_2 = _eContainer_1.eContainer();
+      EList<EObject> _eContents_1 = _eContainer_2.eContents();
+      EObject _get_1 = _eContents_1.get(1);
+      EList<VPC> _vpc = ((AmbienteDespliegue) _get_1).getVpc();
       return Scopes.scopeFor(_vpc);
     }
+    System.out.println(":(");
     return null;
   }
 }

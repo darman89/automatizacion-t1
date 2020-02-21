@@ -275,15 +275,15 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'nombre' '=' nombre=NombreAmbiente ';'
 		//	'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']'
 		//	'recursos' '=' '[' recursos+=Recurso ("," recursos+=Recurso)* ']'
-		//	//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-		//	//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		//	//'conexiones' '=' '[' conexiones+=Conexion ( "," conexiones+=Conexion)* ']'
+		//	//'seguridad' '=' '[' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* ']'
 		//
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'{' 'nombre' '=' nombre=NombreAmbiente ';' 'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']' 'recursos' '=' '['
-		//recursos+=Recurso ("," recursos+=Recurso)* ']' //('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-		////('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		//recursos+=Recurso ("," recursos+=Recurso)* ']' //'conexiones' '=' '[' conexiones+=Conexion ( "," conexiones+=Conexion)* ']'
+		////'seguridad' '=' '[' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* ']'
 		//'}'
 		public Group getGroup() { return cGroup; }
 		
@@ -365,8 +365,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//']'
 		public Keyword getRightSquareBracketKeyword_16() { return cRightSquareBracketKeyword_16; }
 		
-		////('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-		////('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		////'conexiones' '=' '[' conexiones+=Conexion ( "," conexiones+=Conexion)* ']'
+		////'seguridad' '=' '[' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* ']'
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
 	}
@@ -554,7 +554,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cVPCKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cIdKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cNombreKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Keyword cEqualsSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cNombreAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cNombreEStringParserRuleCall_7_0 = (RuleCall)cNombreAssignment_7.eContents().get(0);
@@ -562,19 +562,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VPC: //'VPC'
-		//	'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-		//	//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-		//	//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-		//	//('internetgateway' internetgateway=[InternetGateway|EString])?
-		//	'}';
+		//	'{' 'tipo' '=' 'VPC' ';' 'nombre' '=' nombre=EString ';' '}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		////'VPC'
-		//'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-		////('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-		////('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-		////('internetgateway' internetgateway=[InternetGateway|EString])?
-		//'}'
+		//'{' 'tipo' '=' 'VPC' ';' 'nombre' '=' nombre=EString ';' '}'
 		public Group getGroup() { return cGroup; }
 		
 		////'VPC'
@@ -593,8 +585,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 		
-		//'id'
-		public Keyword getIdKeyword_5() { return cIdKeyword_5; }
+		//'nombre'
+		public Keyword getNombreKeyword_5() { return cNombreKeyword_5; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_6() { return cEqualsSignKeyword_6; }
@@ -608,10 +600,6 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//';'
 		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
 		
-		////'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-		////('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-		////('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-		////('internetgateway' internetgateway=[InternetGateway|EString])?
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
@@ -647,7 +635,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVpcKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cVpcAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final CrossReference cVpcVPCCrossReference_7_0 = (CrossReference)cVpcAssignment_7.eContents().get(0);
-		private final RuleCall cVpcVPCIDTerminalRuleCall_7_0_1 = (RuleCall)cVpcVPCCrossReference_7_0.eContents().get(1);
+		private final RuleCall cVpcVPCEStringParserRuleCall_7_0_1 = (RuleCall)cVpcVPCCrossReference_7_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ServidorAplicaciones:
@@ -655,13 +643,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 		//	sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
 		//	conexiones+=[Conexion|EString])* ')')?
-		//	'vpc' vpc=[VPC]
+		//	'vpc' vpc=[VPC|EString]
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ServidorAplicaciones' '{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 		//sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
-		//conexiones+=[Conexion|EString])* ')')? 'vpc' vpc=[VPC] '}'
+		//conexiones+=[Conexion|EString])* ')')? 'vpc' vpc=[VPC|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'ServidorAplicaciones'
@@ -745,14 +733,14 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'vpc'
 		public Keyword getVpcKeyword_6() { return cVpcKeyword_6; }
 		
-		//vpc=[VPC]
+		//vpc=[VPC|EString]
 		public Assignment getVpcAssignment_7() { return cVpcAssignment_7; }
 		
-		//[VPC]
+		//[VPC|EString]
 		public CrossReference getVpcVPCCrossReference_7_0() { return cVpcVPCCrossReference_7_0; }
 		
-		//ID
-		public RuleCall getVpcVPCIDTerminalRuleCall_7_0_1() { return cVpcVPCIDTerminalRuleCall_7_0_1; }
+		//EString
+		public RuleCall getVpcVPCEStringParserRuleCall_7_0_1() { return cVpcVPCEStringParserRuleCall_7_0_1; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
@@ -1990,8 +1978,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'nombre' '=' nombre=NombreAmbiente ';'
 	//	'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']'
 	//	'recursos' '=' '[' recursos+=Recurso ("," recursos+=Recurso)* ']'
-	//	//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-	//	//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+	//	//'conexiones' '=' '[' conexiones+=Conexion ( "," conexiones+=Conexion)* ']'
+	//	//'seguridad' '=' '[' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* ']'
 	//
 	//	'}';
 	public AmbienteDespliegueElements getAmbienteDespliegueAccess() {
@@ -2049,11 +2037,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VPC: //'VPC'
-	//	'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-	//	//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-	//	//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-	//	//('internetgateway' internetgateway=[InternetGateway|EString])?
-	//	'}';
+	//	'{' 'tipo' '=' 'VPC' ';' 'nombre' '=' nombre=EString ';' '}';
 	public VPCElements getVPCAccess() {
 		return pVPC;
 	}
@@ -2077,7 +2061,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 	//	sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
 	//	conexiones+=[Conexion|EString])* ')')?
-	//	'vpc' vpc=[VPC]
+	//	'vpc' vpc=[VPC|EString]
 	//	'}';
 	public ServidorAplicacionesElements getServidorAplicacionesAccess() {
 		return pServidorAplicaciones;

@@ -734,9 +734,9 @@ ruleVPC returns [EObject current=null]
 		{
 			newLeafNode(otherlv_4, grammarAccess.getVPCAccess().getSemicolonKeyword_4());
 		}
-		otherlv_5='id'
+		otherlv_5='nombre'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVPCAccess().getIdKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVPCAccess().getNombreKeyword_5());
 		}
 		otherlv_6='='
 		{
@@ -934,9 +934,12 @@ ruleServidorAplicaciones returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getServidorAplicacionesRule());
 					}
 				}
-				otherlv_15=RULE_ID
 				{
-					newLeafNode(otherlv_15, grammarAccess.getServidorAplicacionesAccess().getVpcVPCCrossReference_7_0());
+					newCompositeNode(grammarAccess.getServidorAplicacionesAccess().getVpcVPCCrossReference_7_0());
+				}
+				ruleEString
+				{
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)

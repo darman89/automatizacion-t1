@@ -36,8 +36,8 @@ AmbienteDespliegue returns AmbienteDespliegue:
 		'nombre' '=' nombre=NombreAmbiente ';'
 		'vpcs' '=' '[' vpc+=VPC ( "," vpc+=VPC)* ']'
 		'recursos' '=' '[' recursos+=Recurso ( "," recursos+=Recurso)* ']'
-		//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-		//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		//'conexiones' '=' '[' conexiones+=Conexion ( "," conexiones+=Conexion)* ']'
+		//'seguridad' '=' '[' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* ']'
 		
 	'}';
 
@@ -67,11 +67,7 @@ VPC returns VPC:
 	//'VPC'
 	'{' 
 		'tipo' '=' 'VPC' ';'
-		'id' '=' nombre=EString ';'
-		//'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
-		//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
-		//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
-		//('internetgateway' internetgateway=[InternetGateway|EString])?
+		'nombre' '=' nombre=EString ';'
 		'}' 
 	;
 
