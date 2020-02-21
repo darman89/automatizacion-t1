@@ -5,9 +5,168 @@ import "talleruno"
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 Infraestructura returns Infraestructura:
-	'Infraestructura' nombre= EString 	'{'
-		
+	'Infraestructura' nombre=EString
+	'{'
+		proveedor=Proveedor
 	'}';
 
-	EString returns ecore::EString:
+
+ParametroConexion returns ParametroConexion:
+	UsuarioPassword | Llave;
+
+
+Recurso returns Recurso:
+	ServidorAplicaciones | ServidorAlmacenamiento | BaseDatosSQL | BaseDatosNoSQL;
+
+
+MecanismoSeguridad returns MecanismoSeguridad:
+	InternetGateway | Subred | GrupoSeguridad;
+
+EString returns ecore::EString:
 	STRING | ID;
+
+Proveedor returns Proveedor:
+		'Tipo' '=' nombre=EString
+		'parametroConexion' '=' parametroConexion=ParametroConexion
+		('ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ( "," ambientesDespliegue+=AmbienteDespliegue)* ']' )?
+	;
+
+AmbienteDespliegue returns AmbienteDespliegue:
+	{AmbienteDespliegue}
+	'{'
+		('nombre' '=' nombre=NombreAmbiente)?
+		('recursos' '{' recursos+=Recurso ( "," recursos+=Recurso)* '}' )?
+		('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+		('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		('vpc' '=' '[' '{' vpc+=VPC ( "," vpc+=VPC)* '}' )? ']'
+	'}';
+
+UsuarioPassword returns UsuarioPassword:
+	{UsuarioPassword}
+	'UsuarioPassword'
+	'{'
+		('usuario' usuario=EString)?
+		('password' password=EString)?
+	'}';
+
+Llave returns Llave:
+	{Llave}
+	'Llave'
+	'{'
+		('secreto' secreto=EString)?
+	'}';
+
+enum NombreAmbiente returns NombreAmbiente:
+				DESARROLLO = 'DESARROLLO' | PRUEBAS = 'PRUEBAS' | QA = 'QA' | PRODUCCION = 'PRODUCCION';
+
+Conexion returns Conexion:
+	'Conexion'
+	'{'
+		('nombre' nombre=EString)?
+		'recursos' '(' recursos+=[Recurso|EString] ( "," recursos+=[Recurso|EString])* ')' 
+	'}';
+
+VPC returns VPC:
+	'VPC'
+	'{'
+		('nombre' nombre=EString)?
+		'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+		('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
+		('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
+		('internetgateway' internetgateway=[InternetGateway|EString])?
+	'}';
+
+enum TamanioServidor returns TamanioServidor:
+				MICRO = 'MICRO' | SMALL = 'SMALL' | MEDIUM = 'MEDIUM' | LARGE = 'LARGE';
+
+ServidorAplicaciones returns ServidorAplicaciones:
+	'ServidorAplicaciones'
+	'{'
+		('nombre' nombre=EString)?
+		('tamanio' tamanio=TamanioServidor)?
+		('sistemaOperativo' sistemaOperativo=SistemaOperativo)?
+		('conexiones' '(' conexiones+=[Conexion|EString] ( "," conexiones+=[Conexion|EString])* ')' )?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+ServidorAlmacenamiento returns ServidorAlmacenamiento:
+	'ServidorAlmacenamiento'
+	'{'
+		('nombre' nombre=EString)?
+		('tamanio' tamanio=TamanioServidor)?
+		('tamanioInicial' tamanioInicial=EInt)?
+		('conexiones' '(' conexiones+=[Conexion|EString] ( "," conexiones+=[Conexion|EString])* ')' )?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+BaseDatosSQL returns BaseDatosSQL:
+	'BaseDatosSQL'
+	'{'
+		('nombre' nombre=EString)?
+		('tamanio' tamanio=TamanioServidor)?
+		('manejador' manejador=ManejadorSQL)?
+		('conexiones' '(' conexiones+=[Conexion|EString] ( "," conexiones+=[Conexion|EString])* ')' )?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+BaseDatosNoSQL returns BaseDatosNoSQL:
+	'BaseDatosNoSQL'
+	'{'
+		('nombre' nombre=EString)?
+		('tamanio' tamanio=TamanioServidor)?
+		('manejador' manejador=ManejadorNoSQL)?
+		('conexiones' '(' conexiones+=[Conexion|EString] ( "," conexiones+=[Conexion|EString])* ')' )?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+enum SistemaOperativo returns SistemaOperativo:
+				Windows = 'Windows' | Ubuntu1804 = 'Ubuntu1804';
+
+EInt returns ecore::EInt:
+	'-'? INT;
+
+enum ManejadorSQL returns ManejadorSQL:
+				POSTGRESQL = 'POSTGRESQL' | MYSQL = 'MYSQL' | ORACLE = 'ORACLE' | SQLSERVER = 'SQLSERVER';
+
+enum ManejadorNoSQL returns ManejadorNoSQL:
+				MONGODB = 'MONGODB' | CASSANDRA = 'CASSANDRA';
+
+InternetGateway returns InternetGateway:
+	'InternetGateway'
+	'{'
+		('nombre' nombre=EString)?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+Subred returns Subred:
+	'Subred'
+	'{'
+		('nombre' nombre=EString)?
+		('CIDR' CIDR=EString)?
+		('zonaDisponibilidad' zonaDisponibilidad=EString)?
+		'vpc' vpc=[VPC|EString]
+	'}';
+
+GrupoSeguridad returns GrupoSeguridad:
+	'GrupoSeguridad'
+	'{'
+		('nombre' nombre=EString)?
+		('descripcion' descripcion=EString)?
+		'vpc' vpc=[VPC|EString]
+		('reglasEntrada' '{' reglasEntrada+=Regla ( "," reglasEntrada+=Regla)* '}' )?
+		('reglasSalida' '{' reglasSalida+=Regla ( "," reglasSalida+=Regla)* '}' )?
+	'}';
+
+Regla returns Regla:
+	{Regla}
+	'Regla'
+	'{'
+		('tipo' tipo=EString)?
+		('protocolo' protocolo=Protocolo)?
+		('puerto' puerto=EInt)?
+		('origen' origen=EString)?
+		('descripcion' descripcion=EString)?
+	'}';
+
+enum Protocolo returns Protocolo:
+				TCP = 'TCP' | UDP = 'UDP';

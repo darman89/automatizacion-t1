@@ -5,7 +5,7 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.xtext.example.mydsl; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: uniandes.mdd.example.talleruno,
+Require-Bundle: gramatica,
  org.eclipse.xtext,
  org.eclipse.xtext.xbase,
  org.eclipse.equinox.common;bundle-version="3.5.0",

@@ -6,7 +6,7 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.xtext.example.mydsl.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.mydsl,
- uniandes.mdd.example.talleruno,
+ gramatica,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

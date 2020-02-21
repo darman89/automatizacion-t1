@@ -30,8 +30,8 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "org.xtext.example.mydsl.MyDsl"
-			fileExtensions = "ceffective"
-			referencedResource = "platform:/resource/uniandes.mdd.example.talleruno/model/talleruno.genmodel"
+			fileExtensions = "ceff"
+			referencedResource = "platform:/resource/gramatica/model/gramatica.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 

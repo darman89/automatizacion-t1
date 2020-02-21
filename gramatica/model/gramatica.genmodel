@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/gramatica/src-gen" creationIcons="false" editDirectory="/gramatica.edit/src-gen"
+    editorDirectory="/gramatica.editor/src-gen" modelPluginID="gramatica" modelName="Gramatica"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>gramatica.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Gramatica" disposableProviderFactory="true" ecorePackage="gramatica.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//NombreAmbiente">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//NombreAmbiente/DESARROLLO"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//NombreAmbiente/PRUEBAS"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//NombreAmbiente/QA"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//NombreAmbiente/PRODUCCION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//TamanioServidor">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//TamanioServidor/MICRO"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//TamanioServidor/SMALL"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//TamanioServidor/MEDIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//TamanioServidor/LARGE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//SistemaOperativo">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//SistemaOperativo/Windows"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//SistemaOperativo/Ubuntu1804"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//ManejadorNoSQL">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorNoSQL/MONGODB"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorNoSQL/CASSANDRA"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//ManejadorSQL">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorSQL/POSTGRESQL"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorSQL/MYSQL"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorSQL/ORACLE"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//ManejadorSQL/SQLSERVER"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="gramatica.ecore#//Protocolo">
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//Protocolo/TCP"/>
+      <genEnumLiterals ecoreEnumLiteral="gramatica.ecore#//Protocolo/UDP"/>
+    </genEnums>
+    <genClasses ecoreClass="gramatica.ecore#//Proveedor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//Proveedor/parametroConexion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Proveedor/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//Proveedor/ambientesDespliegue"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gramatica.ecore#//ParametroConexion"/>
+    <genClasses ecoreClass="gramatica.ecore#//UsuarioPassword">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//UsuarioPassword/usuario"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//UsuarioPassword/password"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//Llave">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Llave/secreto"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//AmbienteDespliegue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//AmbienteDespliegue/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//AmbienteDespliegue/recursos"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//AmbienteDespliegue/conexiones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//AmbienteDespliegue/seguridad"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//AmbienteDespliegue/vpc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gramatica.ecore#//Recurso">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//Recurso/conexiones"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Recurso/nombre"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Recurso/tamanio"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//Recurso/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//ServidorAplicaciones">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//ServidorAplicaciones/sistemaOperativo"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gramatica.ecore#//ServidorBaseDatos"/>
+    <genClasses ecoreClass="gramatica.ecore#//ServidorAlmacenamiento">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//ServidorAlmacenamiento/tamanioInicial"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//Conexion">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//Conexion/recursos"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Conexion/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//BaseDatosSQL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//BaseDatosSQL/manejador"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//BaseDatosNoSQL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//BaseDatosNoSQL/manejador"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//InternetGateway">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//InternetGateway/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//VPC">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//VPC/nombre"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/recurso"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/gruposeguridad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/subred"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/internetgateway"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//Subred">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Subred/CIDR"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Subred/zonaDisponibilidad"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//Subred/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//GrupoSeguridad">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//GrupoSeguridad/reglasEntrada"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//GrupoSeguridad/reglasSalida"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//GrupoSeguridad/descripcion"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//GrupoSeguridad/vpc"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//Regla">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Regla/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Regla/protocolo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Regla/puerto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Regla/origen"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Regla/descripcion"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="gramatica.ecore#//MecanismoSeguridad">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//MecanismoSeguridad/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="gramatica.ecore#//Infraestructura">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Infraestructura/nombre"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference gramatica.ecore#//Infraestructura/proveedor"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
