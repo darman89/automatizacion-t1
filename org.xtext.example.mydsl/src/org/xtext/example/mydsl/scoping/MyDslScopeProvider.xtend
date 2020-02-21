@@ -3,6 +3,16 @@
  */
 package org.xtext.example.mydsl.scoping
 
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider
+import org.eclipse.xtext.scoping.IScope
+import org.eclipse.emf.ecore.EObject
+import org.eclipse.emf.ecore.EReference
+import talleruno.Recurso
+import talleruno.VPC
+import talleruno.Infraestructura
+import talleruno.AmbienteDespliegue
+import org.eclipse.xtext.scoping.Scopes
+import talleruno.ServidorAplicaciones
 
 /**
  * This class contains custom scoping description.
@@ -10,6 +20,12 @@ package org.xtext.example.mydsl.scoping
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#scoping
  * on how and when to use it.
  */
-class MyDslScopeProvider extends AbstractMyDslScopeProvider {
-
+class MyDslScopeProvider extends AbstractDeclarativeScopeProvider {
+	override public IScope getScope(EObject context, EReference reference)
+	{
+		if (context instanceof ServidorAplicaciones && reference.name == "vpc")
+		{
+			return Scopes::scopeFor((context.eContainer.eContainer.eContents.get(1) as AmbienteDespliegue).vpc);
+		}
+	}
 }

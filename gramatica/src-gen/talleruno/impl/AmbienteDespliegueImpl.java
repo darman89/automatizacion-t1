@@ -129,6 +129,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NombreAmbiente getNombre() {
 		return nombre;
 	}
@@ -138,6 +139,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(NombreAmbiente newNombre) {
 		NombreAmbiente oldNombre = nombre;
 		nombre = newNombre == null ? NOMBRE_EDEFAULT : newNombre;
@@ -152,6 +154,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Recurso> getRecursos() {
 		if (recursos == null) {
 			recursos = new EObjectContainmentEList<Recurso>(Recurso.class,
@@ -165,6 +168,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Conexion> getConexiones() {
 		if (conexiones == null) {
 			conexiones = new EObjectContainmentEList<Conexion>(Conexion.class,
@@ -178,6 +182,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MecanismoSeguridad> getSeguridad() {
 		if (seguridad == null) {
 			seguridad = new EObjectContainmentEList<MecanismoSeguridad>(
@@ -192,6 +197,7 @@ public class AmbienteDespliegueImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<VPC> getVpc() {
 		if (vpc == null) {
 			vpc = new EObjectContainmentEList<VPC>(VPC.class, this,

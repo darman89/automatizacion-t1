@@ -28,10 +28,6 @@ public interface Regla extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Tipo</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tipo</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tipo</em>' attribute.
 	 * @see #setTipo(String)
@@ -55,10 +51,6 @@ public interface Regla extends EObject {
 	 * Returns the value of the '<em><b>Protocolo</b></em>' attribute.
 	 * The literals are from the enumeration {@link talleruno.Protocolo}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Protocolo</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Protocolo</em>' attribute.
 	 * @see talleruno.Protocolo
@@ -83,10 +75,6 @@ public interface Regla extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Puerto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Puerto</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Puerto</em>' attribute.
 	 * @see #setPuerto(int)
@@ -109,10 +97,6 @@ public interface Regla extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Origen</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Origen</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Origen</em>' attribute.
 	 * @see #setOrigen(String)
@@ -135,10 +119,6 @@ public interface Regla extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Descripcion</em>' attribute.
 	 * @see #setDescripcion(String)

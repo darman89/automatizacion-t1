@@ -166,6 +166,7 @@ public class ProveedorImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -175,6 +176,7 @@ public class ProveedorImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(String newNombre) {
 		String oldNombre = nombre;
 		nombre = newNombre;
@@ -188,6 +190,7 @@ public class ProveedorImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<AmbienteDespliegue> getAmbientesDespliegue() {
 		if (ambientesDespliegue == null) {
 			ambientesDespliegue = new EObjectContainmentEList<AmbienteDespliegue>(

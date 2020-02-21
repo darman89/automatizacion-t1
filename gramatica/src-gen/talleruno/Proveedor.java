@@ -54,10 +54,6 @@ public interface Proveedor extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
@@ -81,10 +77,6 @@ public interface Proveedor extends EObject {
 	 * Returns the value of the '<em><b>Ambientes Despliegue</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.AmbienteDespliegue}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Ambientes Despliegue</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Ambientes Despliegue</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getProveedor_AmbientesDespliegue()

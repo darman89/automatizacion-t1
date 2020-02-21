@@ -69,6 +69,7 @@ public class LlaveImpl extends ParametroConexionImpl implements Llave {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSecreto() {
 		return secreto;
 	}
@@ -78,6 +79,7 @@ public class LlaveImpl extends ParametroConexionImpl implements Llave {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecreto(String newSecreto) {
 		String oldSecreto = secreto;
 		secreto = newSecreto;

@@ -70,6 +70,7 @@ public class ServidorAlmacenamientoImpl extends RecursoImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getTamanioInicial() {
 		return tamanioInicial;
 	}
@@ -79,6 +80,7 @@ public class ServidorAlmacenamientoImpl extends RecursoImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTamanioInicial(int newTamanioInicial) {
 		int oldTamanioInicial = tamanioInicial;
 		tamanioInicial = newTamanioInicial;

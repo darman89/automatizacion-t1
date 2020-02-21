@@ -290,6 +290,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getProveedor() {
 		return proveedorEClass;
 	}
@@ -308,6 +309,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getProveedor_Nombre() {
 		return (EAttribute) proveedorEClass.getEStructuralFeatures().get(1);
 	}
@@ -317,6 +319,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getProveedor_AmbientesDespliegue() {
 		return (EReference) proveedorEClass.getEStructuralFeatures().get(2);
 	}
@@ -326,6 +329,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getParametroConexion() {
 		return parametroConexionEClass;
 	}
@@ -335,6 +339,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getUsuarioPassword() {
 		return usuarioPasswordEClass;
 	}
@@ -344,6 +349,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsuarioPassword_Usuario() {
 		return (EAttribute) usuarioPasswordEClass.getEStructuralFeatures().get(
 				0);
@@ -354,6 +360,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getUsuarioPassword_Password() {
 		return (EAttribute) usuarioPasswordEClass.getEStructuralFeatures().get(
 				1);
@@ -364,6 +371,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getLlave() {
 		return llaveEClass;
 	}
@@ -373,6 +381,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getLlave_Secreto() {
 		return (EAttribute) llaveEClass.getEStructuralFeatures().get(0);
 	}
@@ -382,6 +391,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getAmbienteDespliegue() {
 		return ambienteDespliegueEClass;
 	}
@@ -391,6 +401,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getAmbienteDespliegue_Nombre() {
 		return (EAttribute) ambienteDespliegueEClass.getEStructuralFeatures()
 				.get(0);
@@ -401,6 +412,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAmbienteDespliegue_Recursos() {
 		return (EReference) ambienteDespliegueEClass.getEStructuralFeatures()
 				.get(1);
@@ -411,6 +423,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAmbienteDespliegue_Conexiones() {
 		return (EReference) ambienteDespliegueEClass.getEStructuralFeatures()
 				.get(2);
@@ -421,6 +434,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAmbienteDespliegue_Seguridad() {
 		return (EReference) ambienteDespliegueEClass.getEStructuralFeatures()
 				.get(3);
@@ -431,6 +445,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getAmbienteDespliegue_Vpc() {
 		return (EReference) ambienteDespliegueEClass.getEStructuralFeatures()
 				.get(4);
@@ -441,6 +456,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRecurso() {
 		return recursoEClass;
 	}
@@ -450,6 +466,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecurso_Conexiones() {
 		return (EReference) recursoEClass.getEStructuralFeatures().get(0);
 	}
@@ -459,6 +476,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRecurso_Nombre() {
 		return (EAttribute) recursoEClass.getEStructuralFeatures().get(1);
 	}
@@ -468,6 +486,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRecurso_Tamanio() {
 		return (EAttribute) recursoEClass.getEStructuralFeatures().get(2);
 	}
@@ -477,6 +496,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getRecurso_Vpc() {
 		return (EReference) recursoEClass.getEStructuralFeatures().get(3);
 	}
@@ -486,6 +506,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getServidorAplicaciones() {
 		return servidorAplicacionesEClass;
 	}
@@ -495,6 +516,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServidorAplicaciones_SistemaOperativo() {
 		return (EAttribute) servidorAplicacionesEClass.getEStructuralFeatures()
 				.get(0);
@@ -505,6 +527,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getServidorBaseDatos() {
 		return servidorBaseDatosEClass;
 	}
@@ -514,6 +537,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getServidorAlmacenamiento() {
 		return servidorAlmacenamientoEClass;
 	}
@@ -523,6 +547,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getServidorAlmacenamiento_TamanioInicial() {
 		return (EAttribute) servidorAlmacenamientoEClass
 				.getEStructuralFeatures().get(0);
@@ -533,6 +558,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getConexion() {
 		return conexionEClass;
 	}
@@ -542,6 +568,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getConexion_Recursos() {
 		return (EReference) conexionEClass.getEStructuralFeatures().get(0);
 	}
@@ -551,6 +578,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getConexion_Nombre() {
 		return (EAttribute) conexionEClass.getEStructuralFeatures().get(1);
 	}
@@ -560,6 +588,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBaseDatosSQL() {
 		return baseDatosSQLEClass;
 	}
@@ -569,6 +598,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBaseDatosSQL_Manejador() {
 		return (EAttribute) baseDatosSQLEClass.getEStructuralFeatures().get(0);
 	}
@@ -578,6 +608,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getBaseDatosNoSQL() {
 		return baseDatosNoSQLEClass;
 	}
@@ -587,6 +618,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getBaseDatosNoSQL_Manejador() {
 		return (EAttribute) baseDatosNoSQLEClass.getEStructuralFeatures()
 				.get(0);
@@ -597,6 +629,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInternetGateway() {
 		return internetGatewayEClass;
 	}
@@ -606,6 +639,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInternetGateway_Vpc() {
 		return (EReference) internetGatewayEClass.getEStructuralFeatures().get(
 				0);
@@ -616,6 +650,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getVPC() {
 		return vpcEClass;
 	}
@@ -625,6 +660,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getVPC_Nombre() {
 		return (EAttribute) vpcEClass.getEStructuralFeatures().get(0);
 	}
@@ -634,42 +670,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVPC_Recurso() {
-		return (EReference) vpcEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVPC_Gruposeguridad() {
-		return (EReference) vpcEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVPC_Subred() {
-		return (EReference) vpcEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVPC_Internetgateway() {
-		return (EReference) vpcEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EClass getSubred() {
 		return subredEClass;
 	}
@@ -679,6 +680,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSubred_CIDR() {
 		return (EAttribute) subredEClass.getEStructuralFeatures().get(0);
 	}
@@ -688,6 +690,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getSubred_ZonaDisponibilidad() {
 		return (EAttribute) subredEClass.getEStructuralFeatures().get(1);
 	}
@@ -697,6 +700,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getSubred_Vpc() {
 		return (EReference) subredEClass.getEStructuralFeatures().get(2);
 	}
@@ -706,6 +710,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getGrupoSeguridad() {
 		return grupoSeguridadEClass;
 	}
@@ -715,6 +720,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGrupoSeguridad_ReglasEntrada() {
 		return (EReference) grupoSeguridadEClass.getEStructuralFeatures()
 				.get(0);
@@ -725,6 +731,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGrupoSeguridad_ReglasSalida() {
 		return (EReference) grupoSeguridadEClass.getEStructuralFeatures()
 				.get(1);
@@ -735,6 +742,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getGrupoSeguridad_Descripcion() {
 		return (EAttribute) grupoSeguridadEClass.getEStructuralFeatures()
 				.get(2);
@@ -745,6 +753,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getGrupoSeguridad_Vpc() {
 		return (EReference) grupoSeguridadEClass.getEStructuralFeatures()
 				.get(3);
@@ -755,6 +764,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getRegla() {
 		return reglaEClass;
 	}
@@ -764,6 +774,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegla_Tipo() {
 		return (EAttribute) reglaEClass.getEStructuralFeatures().get(0);
 	}
@@ -773,6 +784,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegla_Protocolo() {
 		return (EAttribute) reglaEClass.getEStructuralFeatures().get(1);
 	}
@@ -782,6 +794,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegla_Puerto() {
 		return (EAttribute) reglaEClass.getEStructuralFeatures().get(2);
 	}
@@ -791,6 +804,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegla_Origen() {
 		return (EAttribute) reglaEClass.getEStructuralFeatures().get(3);
 	}
@@ -800,6 +814,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getRegla_Descripcion() {
 		return (EAttribute) reglaEClass.getEStructuralFeatures().get(4);
 	}
@@ -809,6 +824,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getMecanismoSeguridad() {
 		return mecanismoSeguridadEClass;
 	}
@@ -818,6 +834,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getMecanismoSeguridad_Nombre() {
 		return (EAttribute) mecanismoSeguridadEClass.getEStructuralFeatures()
 				.get(0);
@@ -828,6 +845,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getInfraestructura() {
 		return infraestructuraEClass;
 	}
@@ -837,6 +855,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAttribute getInfraestructura_Nombre() {
 		return (EAttribute) infraestructuraEClass.getEStructuralFeatures().get(
 				0);
@@ -847,6 +866,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EReference getInfraestructura_Proveedor() {
 		return (EReference) infraestructuraEClass.getEStructuralFeatures().get(
 				1);
@@ -857,6 +877,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getNombreAmbiente() {
 		return nombreAmbienteEEnum;
 	}
@@ -866,6 +887,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getTamanioServidor() {
 		return tamanioServidorEEnum;
 	}
@@ -875,6 +897,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getSistemaOperativo() {
 		return sistemaOperativoEEnum;
 	}
@@ -884,6 +907,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getManejadorNoSQL() {
 		return manejadorNoSQLEEnum;
 	}
@@ -893,6 +917,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getManejadorSQL() {
 		return manejadorSQLEEnum;
 	}
@@ -902,6 +927,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EEnum getProtocolo() {
 		return protocoloEEnum;
 	}
@@ -911,6 +937,7 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GramaticaFactory getGramaticaFactory() {
 		return (GramaticaFactory) getEFactoryInstance();
 	}
@@ -990,10 +1017,6 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 
 		vpcEClass = createEClass(VPC);
 		createEAttribute(vpcEClass, VPC__NOMBRE);
-		createEReference(vpcEClass, VPC__RECURSO);
-		createEReference(vpcEClass, VPC__GRUPOSEGURIDAD);
-		createEReference(vpcEClass, VPC__SUBRED);
-		createEReference(vpcEClass, VPC__INTERNETGATEWAY);
 
 		subredEClass = createEClass(SUBRED);
 		createEAttribute(subredEClass, SUBRED__CIDR);
@@ -1155,10 +1178,10 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 				"tamanio", null, 0, 1, Recurso.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRecurso_Vpc(), this.getVPC(), this.getVPC_Recurso(),
-				"vpc", null, 1, 1, Recurso.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecurso_Vpc(), this.getVPC(), null, "vpc", null, 1,
+				1, Recurso.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(servidorAplicacionesEClass, ServidorAplicaciones.class,
 				"ServidorAplicaciones", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1212,9 +1235,8 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 		initEClass(internetGatewayEClass, InternetGateway.class,
 				"InternetGateway", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInternetGateway_Vpc(), this.getVPC(),
-				this.getVPC_Internetgateway(), "vpc", null, 1, 1,
-				InternetGateway.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getInternetGateway_Vpc(), this.getVPC(), null, "vpc",
+				null, 1, 1, InternetGateway.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1224,25 +1246,6 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 				null, 0, 1, talleruno.VPC.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getVPC_Recurso(), this.getRecurso(),
-				this.getRecurso_Vpc(), "recurso", null, 1, -1,
-				talleruno.VPC.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVPC_Gruposeguridad(), this.getGrupoSeguridad(),
-				this.getGrupoSeguridad_Vpc(), "gruposeguridad", null, 0, -1,
-				talleruno.VPC.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVPC_Subred(), this.getSubred(), this.getSubred_Vpc(),
-				"subred", null, 0, -1, talleruno.VPC.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVPC_Internetgateway(), this.getInternetGateway(),
-				this.getInternetGateway_Vpc(), "internetgateway", null, 0, 1,
-				talleruno.VPC.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(subredEClass, Subred.class, "Subred", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1254,10 +1257,10 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 				ecorePackage.getEString(), "zonaDisponibilidad", null, 0, 1,
 				Subred.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubred_Vpc(), this.getVPC(), this.getVPC_Subred(),
-				"vpc", null, 1, 1, Subred.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubred_Vpc(), this.getVPC(), null, "vpc", null, 1, 1,
+				Subred.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(grupoSeguridadEClass, GrupoSeguridad.class,
 				"GrupoSeguridad", !IS_ABSTRACT, !IS_INTERFACE,
@@ -1277,9 +1280,8 @@ public class GramaticaPackageImpl extends EPackageImpl implements
 				GrupoSeguridad.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getGrupoSeguridad_Vpc(), this.getVPC(),
-				this.getVPC_Gruposeguridad(), "vpc", null, 1, 1,
-				GrupoSeguridad.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getGrupoSeguridad_Vpc(), this.getVPC(), null, "vpc",
+				null, 1, 1, GrupoSeguridad.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

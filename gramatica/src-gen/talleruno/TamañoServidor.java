@@ -10,129 +10,125 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Nombre Ambiente</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Tamaño Servidor</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see talleruno.GramaticaPackage#getNombreAmbiente()
+ * @see talleruno.GramaticaPackage#getTamañoServidor()
  * @model
  * @generated
  */
-public enum NombreAmbiente implements Enumerator {
+public enum TamañoServidor implements Enumerator {
 	/**
-	 * The '<em><b>DESARROLLO</b></em>' literal object.
+	 * The '<em><b>MICRO</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DESARROLLO_VALUE
+	 * @see #MICRO_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	DESARROLLO(0, "DESARROLLO", "DESARROLLO"),
+	MICRO(0, "MICRO", "MICRO"),
 
 	/**
-	 * The '<em><b>PRUEBAS</b></em>' literal object.
+	 * The '<em><b>SMALL</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PRUEBAS_VALUE
+	 * @see #SMALL_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PRUEBAS(1, "PRUEBAS", "PRUEBAS"),
+	SMALL(1, "SMALL", "SMALL"),
 
 	/**
-	 * The '<em><b>QA</b></em>' literal object.
+	 * The '<em><b>MEDIUM</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #QA_VALUE
+	 * @see #MEDIUM_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	QA(2, "QA", "QA"),
+	MEDIUM(2, "MEDIUM", "MEDIUM"),
 
 	/**
-	 * The '<em><b>PRODUCCION</b></em>' literal object.
+	 * The '<em><b>LARGE</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PRODUCCION_VALUE
+	 * @see #LARGE_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	PRODUCCION(3, "PRODUCCION", "PRODUCCION");
+	LARGE(3, "LARGE", "LARGE");
 
 	/**
-	 * The '<em><b>DESARROLLO</b></em>' literal value.
+	 * The '<em><b>MICRO</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #DESARROLLO
+	 * @see #MICRO
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int DESARROLLO_VALUE = 0;
+	public static final int MICRO_VALUE = 0;
 
 	/**
-	 * The '<em><b>PRUEBAS</b></em>' literal value.
+	 * The '<em><b>SMALL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #PRUEBAS
+	 * @see #SMALL
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PRUEBAS_VALUE = 1;
+	public static final int SMALL_VALUE = 1;
 
 	/**
-	 * The '<em><b>QA</b></em>' literal value.
+	 * The '<em><b>MEDIUM</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #QA
+	 * @see #MEDIUM
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int QA_VALUE = 2;
+	public static final int MEDIUM_VALUE = 2;
 
 	/**
-	 * The '<em><b>PRODUCCION</b></em>' literal value.
+	 * The '<em><b>LARGE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>PRODUCCION</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #PRODUCCION
+	 * @see #LARGE
 	 * @model
 	 * @generated
 	 * @ordered
 	 */
-	public static final int PRODUCCION_VALUE = 3;
+	public static final int LARGE_VALUE = 3;
 
 	/**
-	 * An array of all the '<em><b>Nombre Ambiente</b></em>' enumerators.
+	 * An array of all the '<em><b>Tamaño Servidor</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final NombreAmbiente[] VALUES_ARRAY = new NombreAmbiente[] {
-			DESARROLLO, PRUEBAS, QA, PRODUCCION, };
+	private static final TamañoServidor[] VALUES_ARRAY = new TamañoServidor[] { MICRO, SMALL, MEDIUM, LARGE, };
 
 	/**
-	 * A public read-only list of all the '<em><b>Nombre Ambiente</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>Tamaño Servidor</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<NombreAmbiente> VALUES = Collections
-			.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<TamañoServidor> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>Nombre Ambiente</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>Tamaño Servidor</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param literal the literal.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static NombreAmbiente get(String literal) {
+	public static TamañoServidor get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			NombreAmbiente result = VALUES_ARRAY[i];
+			TamañoServidor result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -141,14 +137,16 @@ public enum NombreAmbiente implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Nombre Ambiente</b></em>' literal with the specified name.
+	 * Returns the '<em><b>Tamaño Servidor</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param name the name.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static NombreAmbiente getByName(String name) {
+	public static TamañoServidor getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			NombreAmbiente result = VALUES_ARRAY[i];
+			TamañoServidor result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -157,21 +155,23 @@ public enum NombreAmbiente implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>Nombre Ambiente</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>Tamaño Servidor</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @param value the integer value.
+	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static NombreAmbiente get(int value) {
+	public static TamañoServidor get(int value) {
 		switch (value) {
-		case DESARROLLO_VALUE:
-			return DESARROLLO;
-		case PRUEBAS_VALUE:
-			return PRUEBAS;
-		case QA_VALUE:
-			return QA;
-		case PRODUCCION_VALUE:
-			return PRODUCCION;
+		case MICRO_VALUE:
+			return MICRO;
+		case SMALL_VALUE:
+			return SMALL;
+		case MEDIUM_VALUE:
+			return MEDIUM;
+		case LARGE_VALUE:
+			return LARGE;
 		}
 		return null;
 	}
@@ -203,7 +203,7 @@ public enum NombreAmbiente implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private NombreAmbiente(int value, String name, String literal) {
+	private TamañoServidor(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -250,4 +250,4 @@ public enum NombreAmbiente implements Enumerator {
 		return literal;
 	}
 
-} //NombreAmbiente
+} //TamañoServidor

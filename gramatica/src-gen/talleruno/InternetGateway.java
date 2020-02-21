@@ -21,18 +21,12 @@ package talleruno;
 public interface InternetGateway extends MecanismoSeguridad {
 	/**
 	 * Returns the value of the '<em><b>Vpc</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link talleruno.VPC#getInternetgateway <em>Internetgateway</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vpc</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vpc</em>' reference.
 	 * @see #setVpc(VPC)
 	 * @see talleruno.GramaticaPackage#getInternetGateway_Vpc()
-	 * @see talleruno.VPC#getInternetgateway
-	 * @model opposite="internetgateway" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	VPC getVpc();

@@ -87,10 +87,6 @@
     </genClasses>
     <genClasses ecoreClass="gramatica.ecore#//VPC">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//VPC/nombre"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/recurso"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/gruposeguridad"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/subred"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference gramatica.ecore#//VPC/internetgateway"/>
     </genClasses>
     <genClasses ecoreClass="gramatica.ecore#//Subred">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute gramatica.ecore#//Subred/CIDR"/>

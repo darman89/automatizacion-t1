@@ -31,10 +31,6 @@ public interface AmbienteDespliegue extends EObject {
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * The literals are from the enumeration {@link talleruno.NombreAmbiente}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see talleruno.NombreAmbiente
@@ -60,10 +56,6 @@ public interface AmbienteDespliegue extends EObject {
 	 * Returns the value of the '<em><b>Recursos</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.Recurso}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Recursos</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recursos</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getAmbienteDespliegue_Recursos()
@@ -76,10 +68,6 @@ public interface AmbienteDespliegue extends EObject {
 	 * Returns the value of the '<em><b>Conexiones</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.Conexion}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Conexiones</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conexiones</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getAmbienteDespliegue_Conexiones()
@@ -92,10 +80,6 @@ public interface AmbienteDespliegue extends EObject {
 	 * Returns the value of the '<em><b>Seguridad</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.MecanismoSeguridad}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Seguridad</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Seguridad</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getAmbienteDespliegue_Seguridad()
@@ -108,10 +92,6 @@ public interface AmbienteDespliegue extends EObject {
 	 * Returns the value of the '<em><b>Vpc</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.VPC}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vpc</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vpc</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getAmbienteDespliegue_Vpc()

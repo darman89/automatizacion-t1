@@ -25,10 +25,6 @@ public interface Infraestructura extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
@@ -51,10 +47,6 @@ public interface Infraestructura extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Proveedor</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Proveedor</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Proveedor</em>' containment reference.
 	 * @see #setProveedor(Proveedor)

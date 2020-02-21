@@ -29,10 +29,6 @@ public interface Conexion extends EObject {
 	 * The list contents are of type {@link talleruno.Recurso}.
 	 * It is bidirectional and its opposite is '{@link talleruno.Recurso#getConexiones <em>Conexiones</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Recursos</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Recursos</em>' reference list.
 	 * @see talleruno.GramaticaPackage#getConexion_Recursos()
@@ -45,10 +41,6 @@ public interface Conexion extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)

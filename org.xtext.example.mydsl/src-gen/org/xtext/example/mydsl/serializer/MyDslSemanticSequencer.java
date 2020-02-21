@@ -101,13 +101,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     AmbienteDespliegue returns AmbienteDespliegue
 	 *
 	 * Constraint:
-	 *     (
-	 *         nombre=NombreAmbiente? 
-	 *         (recursos+=Recurso recursos+=Recurso*)? 
-	 *         (conexiones+=Conexion conexiones+=Conexion*)? 
-	 *         (seguridad+=MecanismoSeguridad seguridad+=MecanismoSeguridad*)? 
-	 *         (vpc+=VPC vpc+=VPC*)?
-	 *     )
+	 *     (nombre=NombreAmbiente vpc+=VPC vpc+=VPC* recursos+=Recurso recursos+=Recurso*)
 	 */
 	protected void sequence_AmbienteDespliegue(ISerializationContext context, AmbienteDespliegue semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -217,10 +211,16 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Llave returns Llave
 	 *
 	 * Constraint:
-	 *     secreto=EString?
+	 *     secreto=EString
 	 */
 	protected void sequence_Llave(ISerializationContext context, Llave semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GramaticaPackage.Literals.LLAVE__SECRETO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GramaticaPackage.Literals.LLAVE__SECRETO));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getLlaveAccess().getSecretoEStringParserRuleCall_3_0(), semanticObject.getSecreto());
+		feeder.finish();
 	}
 	
 	
@@ -229,7 +229,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Proveedor returns Proveedor
 	 *
 	 * Constraint:
-	 *     (nombre=EString parametroConexion=ParametroConexion (ambientesDespliegue+=AmbienteDespliegue ambientesDespliegue+=AmbienteDespliegue*)?)
+	 *     (nombre=EString parametroConexion=ParametroConexion ambientesDespliegue+=AmbienteDespliegue ambientesDespliegue+=AmbienteDespliegue*)
 	 */
 	protected void sequence_Proveedor(ISerializationContext context, Proveedor semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -278,7 +278,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         tamanio=TamanioServidor? 
 	 *         sistemaOperativo=SistemaOperativo? 
 	 *         (conexiones+=[Conexion|EString] conexiones+=[Conexion|EString]*)? 
-	 *         vpc=[VPC|EString]
+	 *         vpc=[VPC|ID]
 	 *     )
 	 */
 	protected void sequence_ServidorAplicaciones(ISerializationContext context, ServidorAplicaciones semanticObject) {
@@ -305,10 +305,19 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     UsuarioPassword returns UsuarioPassword
 	 *
 	 * Constraint:
-	 *     (usuario=EString? password=EString?)
+	 *     (usuario=EString password=EString)
 	 */
 	protected void sequence_UsuarioPassword(ISerializationContext context, UsuarioPassword semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, GramaticaPackage.Literals.USUARIO_PASSWORD__USUARIO) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GramaticaPackage.Literals.USUARIO_PASSWORD__USUARIO));
+			if (transientValues.isValueTransient(semanticObject, GramaticaPackage.Literals.USUARIO_PASSWORD__PASSWORD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GramaticaPackage.Literals.USUARIO_PASSWORD__PASSWORD));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getUsuarioPasswordAccess().getUsuarioEStringParserRuleCall_2_0(), semanticObject.getUsuario());
+		feeder.accept(grammarAccess.getUsuarioPasswordAccess().getPasswordEStringParserRuleCall_5_0(), semanticObject.getPassword());
+		feeder.finish();
 	}
 	
 	
@@ -325,7 +334,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, GramaticaPackage.Literals.VPC__NOMBRE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVPCAccess().getNombreEStringParserRuleCall_5_0(), semanticObject.getNombre());
+		feeder.accept(grammarAccess.getVPCAccess().getNombreEStringParserRuleCall_7_0(), semanticObject.getNombre());
 		feeder.finish();
 	}
 	

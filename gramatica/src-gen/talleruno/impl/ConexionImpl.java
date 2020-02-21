@@ -92,6 +92,7 @@ public class ConexionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Recurso> getRecursos() {
 		if (recursos == null) {
 			recursos = new EObjectWithInverseResolvingEList.ManyInverse<Recurso>(
@@ -106,6 +107,7 @@ public class ConexionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -115,6 +117,7 @@ public class ConexionImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(String newNombre) {
 		String oldNombre = nombre;
 		nombre = newNombre;

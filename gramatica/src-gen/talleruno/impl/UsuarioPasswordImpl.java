@@ -91,6 +91,7 @@ public class UsuarioPasswordImpl extends ParametroConexionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getUsuario() {
 		return usuario;
 	}
@@ -100,6 +101,7 @@ public class UsuarioPasswordImpl extends ParametroConexionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUsuario(String newUsuario) {
 		String oldUsuario = usuario;
 		usuario = newUsuario;
@@ -114,6 +116,7 @@ public class UsuarioPasswordImpl extends ParametroConexionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getPassword() {
 		return password;
 	}
@@ -123,6 +126,7 @@ public class UsuarioPasswordImpl extends ParametroConexionImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPassword(String newPassword) {
 		String oldPassword = password;
 		password = newPassword;

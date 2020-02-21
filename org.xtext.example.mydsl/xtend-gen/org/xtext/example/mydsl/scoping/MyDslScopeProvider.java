@@ -3,7 +3,16 @@
  */
 package org.xtext.example.mydsl.scoping;
 
-import org.xtext.example.mydsl.scoping.AbstractMyDslScopeProvider;
+import com.google.common.base.Objects;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import talleruno.AmbienteDespliegue;
+import talleruno.ServidorAplicaciones;
+import talleruno.VPC;
 
 /**
  * This class contains custom scoping description.
@@ -12,5 +21,17 @@ import org.xtext.example.mydsl.scoping.AbstractMyDslScopeProvider;
  * on how and when to use it.
  */
 @SuppressWarnings("all")
-public class MyDslScopeProvider extends AbstractMyDslScopeProvider {
+public class MyDslScopeProvider extends AbstractDeclarativeScopeProvider {
+  @Override
+  public IScope getScope(final EObject context, final EReference reference) {
+    if (((context instanceof ServidorAplicaciones) && Objects.equal(reference.getName(), "vpc"))) {
+      EObject _eContainer = context.eContainer();
+      EObject _eContainer_1 = _eContainer.eContainer();
+      EList<EObject> _eContents = _eContainer_1.eContents();
+      EObject _get = _eContents.get(1);
+      EList<VPC> _vpc = ((AmbienteDespliegue) _get).getVpc();
+      return Scopes.scopeFor(_vpc);
+    }
+    return null;
+  }
 }

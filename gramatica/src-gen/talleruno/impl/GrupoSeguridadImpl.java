@@ -114,6 +114,7 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Regla> getReglasEntrada() {
 		if (reglasEntrada == null) {
 			reglasEntrada = new EObjectContainmentEList<Regla>(Regla.class,
@@ -127,6 +128,7 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Regla> getReglasSalida() {
 		if (reglasSalida == null) {
 			reglasSalida = new EObjectContainmentEList<Regla>(Regla.class,
@@ -140,6 +142,7 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescripcion() {
 		return descripcion;
 	}
@@ -149,6 +152,7 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescripcion(String newDescripcion) {
 		String oldDescripcion = descripcion;
 		descripcion = newDescripcion;
@@ -163,6 +167,7 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VPC getVpc() {
 		if (vpc != null && vpc.eIsProxy()) {
 			InternalEObject oldVpc = (InternalEObject) vpc;
@@ -190,59 +195,13 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVpc(VPC newVpc, NotificationChain msgs) {
+	@Override
+	public void setVpc(VPC newVpc) {
 		VPC oldVpc = vpc;
 		vpc = newVpc;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, GramaticaPackage.GRUPO_SEGURIDAD__VPC,
-					oldVpc, newVpc);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVpc(VPC newVpc) {
-		if (newVpc != vpc) {
-			NotificationChain msgs = null;
-			if (vpc != null)
-				msgs = ((InternalEObject) vpc).eInverseRemove(this,
-						GramaticaPackage.VPC__GRUPOSEGURIDAD, VPC.class, msgs);
-			if (newVpc != null)
-				msgs = ((InternalEObject) newVpc).eInverseAdd(this,
-						GramaticaPackage.VPC__GRUPOSEGURIDAD, VPC.class, msgs);
-			msgs = basicSetVpc(newVpc, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GramaticaPackage.GRUPO_SEGURIDAD__VPC, newVpc, newVpc));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd,
-			int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case GramaticaPackage.GRUPO_SEGURIDAD__VPC:
-			if (vpc != null)
-				msgs = ((InternalEObject) vpc).eInverseRemove(this,
-						GramaticaPackage.VPC__GRUPOSEGURIDAD, VPC.class, msgs);
-			return basicSetVpc((VPC) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
+					GramaticaPackage.GRUPO_SEGURIDAD__VPC, oldVpc, vpc));
 	}
 
 	/**
@@ -260,8 +219,6 @@ public class GrupoSeguridadImpl extends MecanismoSeguridadImpl implements
 		case GramaticaPackage.GRUPO_SEGURIDAD__REGLAS_SALIDA:
 			return ((InternalEList<?>) getReglasSalida()).basicRemove(otherEnd,
 					msgs);
-		case GramaticaPackage.GRUPO_SEGURIDAD__VPC:
-			return basicSetVpc(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

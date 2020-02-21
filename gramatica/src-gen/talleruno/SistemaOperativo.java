@@ -41,10 +41,6 @@ public enum SistemaOperativo implements Enumerator {
 	/**
 	 * The '<em><b>Windows</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Windows</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #WINDOWS
 	 * @model name="Windows"
@@ -56,10 +52,6 @@ public enum SistemaOperativo implements Enumerator {
 	/**
 	 * The '<em><b>Ubuntu1804</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>Ubuntu1804</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UBUNTU1804
 	 * @model name="Ubuntu1804"
@@ -172,6 +164,7 @@ public enum SistemaOperativo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -181,6 +174,7 @@ public enum SistemaOperativo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -190,6 +184,7 @@ public enum SistemaOperativo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 		return literal;
 	}

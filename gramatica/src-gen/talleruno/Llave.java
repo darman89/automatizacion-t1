@@ -22,10 +22,6 @@ public interface Llave extends ParametroConexion {
 	/**
 	 * Returns the value of the '<em><b>Secreto</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Secreto</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Secreto</em>' attribute.
 	 * @see #setSecreto(String)

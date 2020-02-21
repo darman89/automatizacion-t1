@@ -61,10 +61,6 @@ public enum TamanioServidor implements Enumerator {
 	/**
 	 * The '<em><b>MICRO</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MICRO</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MICRO
 	 * @model
@@ -76,10 +72,6 @@ public enum TamanioServidor implements Enumerator {
 	/**
 	 * The '<em><b>SMALL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>SMALL</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SMALL
 	 * @model
@@ -91,10 +83,6 @@ public enum TamanioServidor implements Enumerator {
 	/**
 	 * The '<em><b>MEDIUM</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MEDIUM</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MEDIUM
 	 * @model
@@ -106,10 +94,6 @@ public enum TamanioServidor implements Enumerator {
 	/**
 	 * The '<em><b>LARGE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>LARGE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #LARGE
 	 * @model
@@ -226,6 +210,7 @@ public enum TamanioServidor implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -235,6 +220,7 @@ public enum TamanioServidor implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -244,6 +230,7 @@ public enum TamanioServidor implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 		return literal;
 	}

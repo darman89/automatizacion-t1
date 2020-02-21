@@ -38,8 +38,7 @@
         eType="#//Conexion" eOpposite="#//Conexion/recursos"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tamanio" eType="#//TamanioServidor"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"
-        eOpposite="#//VPC/recurso"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServidorAplicaciones" eSuperTypes="#//Recurso">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sistemaOperativo" eType="#//SistemaOperativo"/>
@@ -81,25 +80,15 @@
     <eLiterals name="SQLSERVER" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InternetGateway" eSuperTypes="#//MecanismoSeguridad">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"
-        eOpposite="#//VPC/internetgateway"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VPC">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nombre" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="recurso" lowerBound="1"
-        upperBound="-1" eType="#//Recurso" eOpposite="#//Recurso/vpc"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gruposeguridad" upperBound="-1"
-        eType="#//GrupoSeguridad" eOpposite="#//GrupoSeguridad/vpc"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="subred" upperBound="-1"
-        eType="#//Subred" eOpposite="#//Subred/vpc"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="internetgateway" eType="#//InternetGateway"
-        eOpposite="#//InternetGateway/vpc"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Subred" eSuperTypes="#//MecanismoSeguridad">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="CIDR" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="zonaDisponibilidad" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"
-        eOpposite="#//VPC/subred"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GrupoSeguridad" eSuperTypes="#//MecanismoSeguridad">
     <eStructuralFeatures xsi:type="ecore:EReference" name="reglasEntrada" upperBound="-1"
@@ -107,8 +96,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="reglasSalida" upperBound="-1"
         eType="#//Regla" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="descripcion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"
-        eOpposite="#//VPC/gruposeguridad"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="vpc" lowerBound="1" eType="#//VPC"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Regla">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="tipo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

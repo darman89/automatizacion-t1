@@ -85,6 +85,7 @@ public class InfraestructuraImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -94,6 +95,7 @@ public class InfraestructuraImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(String newNombre) {
 		String oldNombre = nombre;
 		nombre = newNombre;
@@ -107,6 +109,7 @@ public class InfraestructuraImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Proveedor getProveedor() {
 		return proveedor;
 	}
@@ -138,6 +141,7 @@ public class InfraestructuraImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProveedor(Proveedor newProveedor) {
 		if (newProveedor != proveedor) {
 			NotificationChain msgs = null;

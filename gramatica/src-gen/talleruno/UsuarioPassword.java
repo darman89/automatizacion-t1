@@ -23,10 +23,6 @@ public interface UsuarioPassword extends ParametroConexion {
 	/**
 	 * Returns the value of the '<em><b>Usuario</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Usuario</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Usuario</em>' attribute.
 	 * @see #setUsuario(String)
@@ -49,10 +45,6 @@ public interface UsuarioPassword extends ParametroConexion {
 	/**
 	 * Returns the value of the '<em><b>Password</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Password</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Password</em>' attribute.
 	 * @see #setPassword(String)

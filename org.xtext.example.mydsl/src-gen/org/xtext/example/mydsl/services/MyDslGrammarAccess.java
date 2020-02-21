@@ -164,30 +164,28 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNombreAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNombreEStringParserRuleCall_2_0 = (RuleCall)cNombreAssignment_2.eContents().get(0);
-		private final Keyword cParametroConexionKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cParametroConexionAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cParametroConexionParametroConexionParserRuleCall_5_0 = (RuleCall)cParametroConexionAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cAmbientesKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
-		private final Assignment cAmbientesDespliegueAssignment_6_3 = (Assignment)cGroup_6.eContents().get(3);
-		private final RuleCall cAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_3_0 = (RuleCall)cAmbientesDespliegueAssignment_6_3.eContents().get(0);
-		private final Group cGroup_6_4 = (Group)cGroup_6.eContents().get(4);
-		private final Keyword cCommaKeyword_6_4_0 = (Keyword)cGroup_6_4.eContents().get(0);
-		private final Assignment cAmbientesDespliegueAssignment_6_4_1 = (Assignment)cGroup_6_4.eContents().get(1);
-		private final RuleCall cAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_4_1_0 = (RuleCall)cAmbientesDespliegueAssignment_6_4_1.eContents().get(0);
-		private final Keyword cRightSquareBracketKeyword_6_5 = (Keyword)cGroup_6.eContents().get(5);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cParametroConexionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cParametroConexionParametroConexionParserRuleCall_4_0 = (RuleCall)cParametroConexionAssignment_4.eContents().get(0);
+		private final Keyword cAmbientesKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cEqualsSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cAmbientesDespliegueAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cAmbientesDespliegueAmbienteDespliegueParserRuleCall_8_0 = (RuleCall)cAmbientesDespliegueAssignment_8.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cCommaKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cAmbientesDespliegueAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cAmbientesDespliegueAmbienteDespliegueParserRuleCall_9_1_0 = (RuleCall)cAmbientesDespliegueAssignment_9_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Proveedor:
-		//	'Tipo' '=' nombre=EString
-		//	'parametroConexion' '=' parametroConexion=ParametroConexion ('ambientes' '=' '['
-		//	ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']')?;
+		//	'Tipo' '=' nombre=EString ';'
+		//	parametroConexion=ParametroConexion
+		//	'Ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Tipo' '=' nombre=EString 'parametroConexion' '=' parametroConexion=ParametroConexion ('ambientes' '=' '['
-		//ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']')?
+		//'Tipo' '=' nombre=EString ';' parametroConexion=ParametroConexion 'Ambientes' '=' '['
+		//ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']'
 		public Group getGroup() { return cGroup; }
 		
 		//'Tipo'
@@ -202,381 +200,260 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNombreEStringParserRuleCall_2_0() { return cNombreEStringParserRuleCall_2_0; }
 		
-		//'parametroConexion'
-		public Keyword getParametroConexionKeyword_3() { return cParametroConexionKeyword_3; }
-		
-		//'='
-		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 		
 		//parametroConexion=ParametroConexion
-		public Assignment getParametroConexionAssignment_5() { return cParametroConexionAssignment_5; }
+		public Assignment getParametroConexionAssignment_4() { return cParametroConexionAssignment_4; }
 		
 		//ParametroConexion
-		public RuleCall getParametroConexionParametroConexionParserRuleCall_5_0() { return cParametroConexionParametroConexionParserRuleCall_5_0; }
+		public RuleCall getParametroConexionParametroConexionParserRuleCall_4_0() { return cParametroConexionParametroConexionParserRuleCall_4_0; }
 		
-		//('ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']')?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'ambientes'
-		public Keyword getAmbientesKeyword_6_0() { return cAmbientesKeyword_6_0; }
+		//'Ambientes'
+		public Keyword getAmbientesKeyword_5() { return cAmbientesKeyword_5; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_6_1() { return cEqualsSignKeyword_6_1; }
+		public Keyword getEqualsSignKeyword_6() { return cEqualsSignKeyword_6; }
 		
 		//'['
-		public Keyword getLeftSquareBracketKeyword_6_2() { return cLeftSquareBracketKeyword_6_2; }
+		public Keyword getLeftSquareBracketKeyword_7() { return cLeftSquareBracketKeyword_7; }
 		
 		//ambientesDespliegue+=AmbienteDespliegue
-		public Assignment getAmbientesDespliegueAssignment_6_3() { return cAmbientesDespliegueAssignment_6_3; }
+		public Assignment getAmbientesDespliegueAssignment_8() { return cAmbientesDespliegueAssignment_8; }
 		
 		//AmbienteDespliegue
-		public RuleCall getAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_3_0() { return cAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_3_0; }
+		public RuleCall getAmbientesDespliegueAmbienteDespliegueParserRuleCall_8_0() { return cAmbientesDespliegueAmbienteDespliegueParserRuleCall_8_0; }
 		
 		//("," ambientesDespliegue+=AmbienteDespliegue)*
-		public Group getGroup_6_4() { return cGroup_6_4; }
+		public Group getGroup_9() { return cGroup_9; }
 		
 		//","
-		public Keyword getCommaKeyword_6_4_0() { return cCommaKeyword_6_4_0; }
+		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
 		
 		//ambientesDespliegue+=AmbienteDespliegue
-		public Assignment getAmbientesDespliegueAssignment_6_4_1() { return cAmbientesDespliegueAssignment_6_4_1; }
+		public Assignment getAmbientesDespliegueAssignment_9_1() { return cAmbientesDespliegueAssignment_9_1; }
 		
 		//AmbienteDespliegue
-		public RuleCall getAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_4_1_0() { return cAmbientesDespliegueAmbienteDespliegueParserRuleCall_6_4_1_0; }
+		public RuleCall getAmbientesDespliegueAmbienteDespliegueParserRuleCall_9_1_0() { return cAmbientesDespliegueAmbienteDespliegueParserRuleCall_9_1_0; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_6_5() { return cRightSquareBracketKeyword_6_5; }
+		public Keyword getRightSquareBracketKeyword_10() { return cRightSquareBracketKeyword_10; }
 	}
 	public class AmbienteDespliegueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.AmbienteDespliegue");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cAmbienteDespliegueAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cNombreKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cNombreAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cNombreNombreAmbienteEnumRuleCall_2_2_0 = (RuleCall)cNombreAssignment_2_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cRecursosKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
-		private final Assignment cRecursosAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
-		private final RuleCall cRecursosRecursoParserRuleCall_3_2_0 = (RuleCall)cRecursosAssignment_3_2.eContents().get(0);
-		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
-		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
-		private final Assignment cRecursosAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
-		private final RuleCall cRecursosRecursoParserRuleCall_3_3_1_0 = (RuleCall)cRecursosAssignment_3_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cConexionesKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cConexionesAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cConexionesConexionParserRuleCall_4_2_0 = (RuleCall)cConexionesAssignment_4_2.eContents().get(0);
-		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
-		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cConexionesAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final RuleCall cConexionesConexionParserRuleCall_4_3_1_0 = (RuleCall)cConexionesAssignment_4_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cSeguridadKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cSeguridadAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cSeguridadMecanismoSeguridadParserRuleCall_5_2_0 = (RuleCall)cSeguridadAssignment_5_2.eContents().get(0);
-		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cSeguridadAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cSeguridadMecanismoSeguridadParserRuleCall_5_3_1_0 = (RuleCall)cSeguridadAssignment_5_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cVpcKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_6_2 = (Keyword)cGroup_6.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
-		private final Assignment cVpcAssignment_6_4 = (Assignment)cGroup_6.eContents().get(4);
-		private final RuleCall cVpcVPCParserRuleCall_6_4_0 = (RuleCall)cVpcAssignment_6_4.eContents().get(0);
-		private final Group cGroup_6_5 = (Group)cGroup_6.eContents().get(5);
-		private final Keyword cCommaKeyword_6_5_0 = (Keyword)cGroup_6_5.eContents().get(0);
-		private final Assignment cVpcAssignment_6_5_1 = (Assignment)cGroup_6_5.eContents().get(1);
-		private final RuleCall cVpcVPCParserRuleCall_6_5_1_0 = (RuleCall)cVpcAssignment_6_5_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6_6 = (Keyword)cGroup_6.eContents().get(6);
-		private final Keyword cRightSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNombreKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNombreAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNombreNombreAmbienteEnumRuleCall_3_0 = (RuleCall)cNombreAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cVpcsKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cEqualsSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftSquareBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cVpcAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cVpcVPCParserRuleCall_8_0 = (RuleCall)cVpcAssignment_8.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cCommaKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cVpcAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cVpcVPCParserRuleCall_9_1_0 = (RuleCall)cVpcAssignment_9_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRecursosKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cEqualsSignKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cLeftSquareBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cRecursosAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cRecursosRecursoParserRuleCall_14_0 = (RuleCall)cRecursosAssignment_14.eContents().get(0);
+		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
+		private final Keyword cCommaKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
+		private final Assignment cRecursosAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
+		private final RuleCall cRecursosRecursoParserRuleCall_15_1_0 = (RuleCall)cRecursosAssignment_15_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Keyword cRightCurlyBracketKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		
 		//AmbienteDespliegue:
-		//	{AmbienteDespliegue}
-		//	'{' ('nombre' '=' nombre=NombreAmbiente)? ('recursos' '{' recursos+=Recurso ("," recursos+=Recurso)* '}')?
-		//	('conexiones' '{' conexiones+=Conexion ("," conexiones+=Conexion)* '}')? ('seguridad' '{'
-		//	seguridad+=MecanismoSeguridad ("," seguridad+=MecanismoSeguridad)* '}')? ('vpc' '=' '[' '{' vpc+=VPC ("," vpc+=VPC)*
-		//	'}')? ']'
+		//	'{'
+		//	'nombre' '=' nombre=NombreAmbiente ';'
+		//	'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']'
+		//	'recursos' '=' '[' recursos+=Recurso ("," recursos+=Recurso)* ']'
+		//	//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+		//	//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		//
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{AmbienteDespliegue} '{' ('nombre' '=' nombre=NombreAmbiente)? ('recursos' '{' recursos+=Recurso (","
-		//recursos+=Recurso)* '}')? ('conexiones' '{' conexiones+=Conexion ("," conexiones+=Conexion)* '}')? ('seguridad' '{'
-		//seguridad+=MecanismoSeguridad ("," seguridad+=MecanismoSeguridad)* '}')? ('vpc' '=' '[' '{' vpc+=VPC ("," vpc+=VPC)*
-		//'}')? ']' '}'
+		//'{' 'nombre' '=' nombre=NombreAmbiente ';' 'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']' 'recursos' '=' '['
+		//recursos+=Recurso ("," recursos+=Recurso)* ']' //('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+		////('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
-		//{AmbienteDespliegue}
-		public Action getAmbienteDespliegueAction_0() { return cAmbienteDespliegueAction_0; }
-		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
-		
-		//('nombre' '=' nombre=NombreAmbiente)?
-		public Group getGroup_2() { return cGroup_2; }
+		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
 		//'nombre'
-		public Keyword getNombreKeyword_2_0() { return cNombreKeyword_2_0; }
+		public Keyword getNombreKeyword_1() { return cNombreKeyword_1; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_2_1() { return cEqualsSignKeyword_2_1; }
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
 		//nombre=NombreAmbiente
-		public Assignment getNombreAssignment_2_2() { return cNombreAssignment_2_2; }
+		public Assignment getNombreAssignment_3() { return cNombreAssignment_3; }
 		
 		//NombreAmbiente
-		public RuleCall getNombreNombreAmbienteEnumRuleCall_2_2_0() { return cNombreNombreAmbienteEnumRuleCall_2_2_0; }
+		public RuleCall getNombreNombreAmbienteEnumRuleCall_3_0() { return cNombreNombreAmbienteEnumRuleCall_3_0; }
 		
-		//('recursos' '{' recursos+=Recurso ("," recursos+=Recurso)* '}')?
-		public Group getGroup_3() { return cGroup_3; }
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 		
-		//'recursos'
-		public Keyword getRecursosKeyword_3_0() { return cRecursosKeyword_3_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
-		
-		//recursos+=Recurso
-		public Assignment getRecursosAssignment_3_2() { return cRecursosAssignment_3_2; }
-		
-		//Recurso
-		public RuleCall getRecursosRecursoParserRuleCall_3_2_0() { return cRecursosRecursoParserRuleCall_3_2_0; }
-		
-		//("," recursos+=Recurso)*
-		public Group getGroup_3_3() { return cGroup_3_3; }
-		
-		//","
-		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
-		
-		//recursos+=Recurso
-		public Assignment getRecursosAssignment_3_3_1() { return cRecursosAssignment_3_3_1; }
-		
-		//Recurso
-		public RuleCall getRecursosRecursoParserRuleCall_3_3_1_0() { return cRecursosRecursoParserRuleCall_3_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
-		
-		//('conexiones' '{' conexiones+=Conexion ("," conexiones+=Conexion)* '}')?
-		public Group getGroup_4() { return cGroup_4; }
-		
-		//'conexiones'
-		public Keyword getConexionesKeyword_4_0() { return cConexionesKeyword_4_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
-		
-		//conexiones+=Conexion
-		public Assignment getConexionesAssignment_4_2() { return cConexionesAssignment_4_2; }
-		
-		//Conexion
-		public RuleCall getConexionesConexionParserRuleCall_4_2_0() { return cConexionesConexionParserRuleCall_4_2_0; }
-		
-		//("," conexiones+=Conexion)*
-		public Group getGroup_4_3() { return cGroup_4_3; }
-		
-		//","
-		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
-		
-		//conexiones+=Conexion
-		public Assignment getConexionesAssignment_4_3_1() { return cConexionesAssignment_4_3_1; }
-		
-		//Conexion
-		public RuleCall getConexionesConexionParserRuleCall_4_3_1_0() { return cConexionesConexionParserRuleCall_4_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
-		
-		//('seguridad' '{' seguridad+=MecanismoSeguridad ("," seguridad+=MecanismoSeguridad)* '}')?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'seguridad'
-		public Keyword getSeguridadKeyword_5_0() { return cSeguridadKeyword_5_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
-		
-		//seguridad+=MecanismoSeguridad
-		public Assignment getSeguridadAssignment_5_2() { return cSeguridadAssignment_5_2; }
-		
-		//MecanismoSeguridad
-		public RuleCall getSeguridadMecanismoSeguridadParserRuleCall_5_2_0() { return cSeguridadMecanismoSeguridadParserRuleCall_5_2_0; }
-		
-		//("," seguridad+=MecanismoSeguridad)*
-		public Group getGroup_5_3() { return cGroup_5_3; }
-		
-		//","
-		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
-		
-		//seguridad+=MecanismoSeguridad
-		public Assignment getSeguridadAssignment_5_3_1() { return cSeguridadAssignment_5_3_1; }
-		
-		//MecanismoSeguridad
-		public RuleCall getSeguridadMecanismoSeguridadParserRuleCall_5_3_1_0() { return cSeguridadMecanismoSeguridadParserRuleCall_5_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
-		
-		//('vpc' '=' '[' '{' vpc+=VPC ("," vpc+=VPC)* '}')?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//'vpc'
-		public Keyword getVpcKeyword_6_0() { return cVpcKeyword_6_0; }
+		//'vpcs'
+		public Keyword getVpcsKeyword_5() { return cVpcsKeyword_5; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_6_1() { return cEqualsSignKeyword_6_1; }
+		public Keyword getEqualsSignKeyword_6() { return cEqualsSignKeyword_6; }
 		
 		//'['
-		public Keyword getLeftSquareBracketKeyword_6_2() { return cLeftSquareBracketKeyword_6_2; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_6_3() { return cLeftCurlyBracketKeyword_6_3; }
+		public Keyword getLeftSquareBracketKeyword_7() { return cLeftSquareBracketKeyword_7; }
 		
 		//vpc+=VPC
-		public Assignment getVpcAssignment_6_4() { return cVpcAssignment_6_4; }
+		public Assignment getVpcAssignment_8() { return cVpcAssignment_8; }
 		
 		//VPC
-		public RuleCall getVpcVPCParserRuleCall_6_4_0() { return cVpcVPCParserRuleCall_6_4_0; }
+		public RuleCall getVpcVPCParserRuleCall_8_0() { return cVpcVPCParserRuleCall_8_0; }
 		
 		//("," vpc+=VPC)*
-		public Group getGroup_6_5() { return cGroup_6_5; }
+		public Group getGroup_9() { return cGroup_9; }
 		
 		//","
-		public Keyword getCommaKeyword_6_5_0() { return cCommaKeyword_6_5_0; }
+		public Keyword getCommaKeyword_9_0() { return cCommaKeyword_9_0; }
 		
 		//vpc+=VPC
-		public Assignment getVpcAssignment_6_5_1() { return cVpcAssignment_6_5_1; }
+		public Assignment getVpcAssignment_9_1() { return cVpcAssignment_9_1; }
 		
 		//VPC
-		public RuleCall getVpcVPCParserRuleCall_6_5_1_0() { return cVpcVPCParserRuleCall_6_5_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6_6() { return cRightCurlyBracketKeyword_6_6; }
+		public RuleCall getVpcVPCParserRuleCall_9_1_0() { return cVpcVPCParserRuleCall_9_1_0; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_7() { return cRightSquareBracketKeyword_7; }
+		public Keyword getRightSquareBracketKeyword_10() { return cRightSquareBracketKeyword_10; }
 		
+		//'recursos'
+		public Keyword getRecursosKeyword_11() { return cRecursosKeyword_11; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_12() { return cEqualsSignKeyword_12; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_13() { return cLeftSquareBracketKeyword_13; }
+		
+		//recursos+=Recurso
+		public Assignment getRecursosAssignment_14() { return cRecursosAssignment_14; }
+		
+		//Recurso
+		public RuleCall getRecursosRecursoParserRuleCall_14_0() { return cRecursosRecursoParserRuleCall_14_0; }
+		
+		//("," recursos+=Recurso)*
+		public Group getGroup_15() { return cGroup_15; }
+		
+		//","
+		public Keyword getCommaKeyword_15_0() { return cCommaKeyword_15_0; }
+		
+		//recursos+=Recurso
+		public Assignment getRecursosAssignment_15_1() { return cRecursosAssignment_15_1; }
+		
+		//Recurso
+		public RuleCall getRecursosRecursoParserRuleCall_15_1_0() { return cRecursosRecursoParserRuleCall_15_1_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_16() { return cRightSquareBracketKeyword_16; }
+		
+		////('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+		////('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_17() { return cRightCurlyBracketKeyword_17; }
 	}
 	public class UsuarioPasswordElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.UsuarioPassword");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cUsuarioPasswordAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cUsuarioPasswordKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cUsuarioKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cUsuarioAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cUsuarioEStringParserRuleCall_3_1_0 = (RuleCall)cUsuarioAssignment_3_1.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cPasswordKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cPasswordAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cPasswordEStringParserRuleCall_4_1_0 = (RuleCall)cPasswordAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cUserKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cUsuarioAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cUsuarioEStringParserRuleCall_2_0 = (RuleCall)cUsuarioAssignment_2.eContents().get(0);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cPasswordKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cPasswordAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cPasswordEStringParserRuleCall_5_0 = (RuleCall)cPasswordAssignment_5.eContents().get(0);
+		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//UsuarioPassword:
 		//	{UsuarioPassword}
-		//	'UsuarioPassword'
-		//	'{' ('usuario' usuario=EString)? ('password' password=EString)?
-		//	'}';
+		//	'user' usuario=EString ';'
+		//	'password' password=EString ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{UsuarioPassword} 'UsuarioPassword' '{' ('usuario' usuario=EString)? ('password' password=EString)? '}'
+		//{UsuarioPassword} 'user' usuario=EString ';' 'password' password=EString ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{UsuarioPassword}
 		public Action getUsuarioPasswordAction_0() { return cUsuarioPasswordAction_0; }
 		
-		//'UsuarioPassword'
-		public Keyword getUsuarioPasswordKeyword_1() { return cUsuarioPasswordKeyword_1; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
-		//('usuario' usuario=EString)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'usuario'
-		public Keyword getUsuarioKeyword_3_0() { return cUsuarioKeyword_3_0; }
+		//'user'
+		public Keyword getUserKeyword_1() { return cUserKeyword_1; }
 		
 		//usuario=EString
-		public Assignment getUsuarioAssignment_3_1() { return cUsuarioAssignment_3_1; }
+		public Assignment getUsuarioAssignment_2() { return cUsuarioAssignment_2; }
 		
 		//EString
-		public RuleCall getUsuarioEStringParserRuleCall_3_1_0() { return cUsuarioEStringParserRuleCall_3_1_0; }
+		public RuleCall getUsuarioEStringParserRuleCall_2_0() { return cUsuarioEStringParserRuleCall_2_0; }
 		
-		//('password' password=EString)?
-		public Group getGroup_4() { return cGroup_4; }
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 		
 		//'password'
-		public Keyword getPasswordKeyword_4_0() { return cPasswordKeyword_4_0; }
+		public Keyword getPasswordKeyword_4() { return cPasswordKeyword_4; }
 		
 		//password=EString
-		public Assignment getPasswordAssignment_4_1() { return cPasswordAssignment_4_1; }
+		public Assignment getPasswordAssignment_5() { return cPasswordAssignment_5; }
 		
 		//EString
-		public RuleCall getPasswordEStringParserRuleCall_4_1_0() { return cPasswordEStringParserRuleCall_4_1_0; }
+		public RuleCall getPasswordEStringParserRuleCall_5_0() { return cPasswordEStringParserRuleCall_5_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		//';'
+		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
 	}
 	public class LlaveElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Llave");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLlaveAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cLlaveKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cSecretoKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cSecretoAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cSecretoEStringParserRuleCall_3_1_0 = (RuleCall)cSecretoAssignment_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cSecretKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSecretoAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSecretoEStringParserRuleCall_3_0 = (RuleCall)cSecretoAssignment_3.eContents().get(0);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Llave:
 		//	{Llave}
-		//	'Llave'
-		//	'{' ('secreto' secreto=EString)?
-		//	'}';
+		//	'secret' '=' secreto=EString ';';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Llave} 'Llave' '{' ('secreto' secreto=EString)? '}'
+		//{Llave} 'secret' '=' secreto=EString ';'
 		public Group getGroup() { return cGroup; }
 		
 		//{Llave}
 		public Action getLlaveAction_0() { return cLlaveAction_0; }
 		
-		//'Llave'
-		public Keyword getLlaveKeyword_1() { return cLlaveKeyword_1; }
+		//'secret'
+		public Keyword getSecretKeyword_1() { return cSecretKeyword_1; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-		
-		//('secreto' secreto=EString)?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'secreto'
-		public Keyword getSecretoKeyword_3_0() { return cSecretoKeyword_3_0; }
+		//'='
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
 		//secreto=EString
-		public Assignment getSecretoAssignment_3_1() { return cSecretoAssignment_3_1; }
+		public Assignment getSecretoAssignment_3() { return cSecretoAssignment_3; }
 		
 		//EString
-		public RuleCall getSecretoEStringParserRuleCall_3_1_0() { return cSecretoEStringParserRuleCall_3_1_0; }
+		public RuleCall getSecretoEStringParserRuleCall_3_0() { return cSecretoEStringParserRuleCall_3_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 	}
 	public class ConexionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.Conexion");
@@ -587,28 +464,29 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNombreKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cNombreAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cNombreEStringParserRuleCall_2_1_0 = (RuleCall)cNombreAssignment_2_1.eContents().get(0);
-		private final Keyword cRecursosKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cLeftParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cRecursosAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final CrossReference cRecursosRecursoCrossReference_5_0 = (CrossReference)cRecursosAssignment_5.eContents().get(0);
-		private final RuleCall cRecursosRecursoEStringParserRuleCall_5_0_1 = (RuleCall)cRecursosRecursoCrossReference_5_0.eContents().get(1);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cRecursosAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final CrossReference cRecursosRecursoCrossReference_6_1_0 = (CrossReference)cRecursosAssignment_6_1.eContents().get(0);
-		private final RuleCall cRecursosRecursoEStringParserRuleCall_6_1_0_1 = (RuleCall)cRecursosRecursoCrossReference_6_1_0.eContents().get(1);
-		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cRecursosKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cLeftParenthesisKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cRecursosAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cRecursosRecursoCrossReference_6_0 = (CrossReference)cRecursosAssignment_6.eContents().get(0);
+		private final RuleCall cRecursosRecursoEStringParserRuleCall_6_0_1 = (RuleCall)cRecursosRecursoCrossReference_6_0.eContents().get(1);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cRecursosAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final CrossReference cRecursosRecursoCrossReference_7_1_0 = (CrossReference)cRecursosAssignment_7_1.eContents().get(0);
+		private final RuleCall cRecursosRecursoEStringParserRuleCall_7_1_0_1 = (RuleCall)cRecursosRecursoCrossReference_7_1_0.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//Conexion:
 		//	'Conexion'
-		//	'{' ('nombre' nombre=EString)?
+		//	'{' ('nombre' nombre=EString)? ';'
 		//	'recursos' '(' recursos+=[Recurso|EString] ("," recursos+=[Recurso|EString])* ')'
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Conexion' '{' ('nombre' nombre=EString)? 'recursos' '(' recursos+=[Recurso|EString] ("," recursos+=[Recurso|EString])*
-		//')' '}'
+		//'Conexion' '{' ('nombre' nombre=EString)? ';' 'recursos' '(' recursos+=[Recurso|EString] (","
+		//recursos+=[Recurso|EString])* ')' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Conexion'
@@ -629,86 +507,113 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNombreEStringParserRuleCall_2_1_0() { return cNombreEStringParserRuleCall_2_1_0; }
 		
+		//';'
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		
 		//'recursos'
-		public Keyword getRecursosKeyword_3() { return cRecursosKeyword_3; }
+		public Keyword getRecursosKeyword_4() { return cRecursosKeyword_4; }
 		
 		//'('
-		public Keyword getLeftParenthesisKeyword_4() { return cLeftParenthesisKeyword_4; }
+		public Keyword getLeftParenthesisKeyword_5() { return cLeftParenthesisKeyword_5; }
 		
 		//recursos+=[Recurso|EString]
-		public Assignment getRecursosAssignment_5() { return cRecursosAssignment_5; }
+		public Assignment getRecursosAssignment_6() { return cRecursosAssignment_6; }
 		
 		//[Recurso|EString]
-		public CrossReference getRecursosRecursoCrossReference_5_0() { return cRecursosRecursoCrossReference_5_0; }
+		public CrossReference getRecursosRecursoCrossReference_6_0() { return cRecursosRecursoCrossReference_6_0; }
 		
 		//EString
-		public RuleCall getRecursosRecursoEStringParserRuleCall_5_0_1() { return cRecursosRecursoEStringParserRuleCall_5_0_1; }
+		public RuleCall getRecursosRecursoEStringParserRuleCall_6_0_1() { return cRecursosRecursoEStringParserRuleCall_6_0_1; }
 		
 		//("," recursos+=[Recurso|EString])*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 		
 		//","
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 		
 		//recursos+=[Recurso|EString]
-		public Assignment getRecursosAssignment_6_1() { return cRecursosAssignment_6_1; }
+		public Assignment getRecursosAssignment_7_1() { return cRecursosAssignment_7_1; }
 		
 		//[Recurso|EString]
-		public CrossReference getRecursosRecursoCrossReference_6_1_0() { return cRecursosRecursoCrossReference_6_1_0; }
+		public CrossReference getRecursosRecursoCrossReference_7_1_0() { return cRecursosRecursoCrossReference_7_1_0; }
 		
 		//EString
-		public RuleCall getRecursosRecursoEStringParserRuleCall_6_1_0_1() { return cRecursosRecursoEStringParserRuleCall_6_1_0_1; }
+		public RuleCall getRecursosRecursoEStringParserRuleCall_7_1_0_1() { return cRecursosRecursoEStringParserRuleCall_7_1_0_1; }
 		
 		//')'
-		public Keyword getRightParenthesisKeyword_7() { return cRightParenthesisKeyword_7; }
+		public Keyword getRightParenthesisKeyword_8() { return cRightParenthesisKeyword_8; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class VPCElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.VPC");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTipoKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cVPCKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cEqualsSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cNombreAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cNombreEStringParserRuleCall_5_0 = (RuleCall)cNombreAssignment_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTipoKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cEqualsSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cVPCKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cSemicolonKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cIdKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cEqualsSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cNombreAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cNombreEStringParserRuleCall_7_0 = (RuleCall)cNombreAssignment_7.eContents().get(0);
+		private final Keyword cSemicolonKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VPC: //'VPC'
-		//	'tipo' '=' 'VPC' 'id' '=' nombre=EString //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+		//	'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
 		//	//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
 		//	//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
 		//	//('internetgateway' internetgateway=[InternetGateway|EString])?
-		//;
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		////'VPC'
-		//'tipo' '=' 'VPC' 'id' '=' nombre=EString
+		//'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+		////('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
+		////('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
+		////('internetgateway' internetgateway=[InternetGateway|EString])?
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		////'VPC'
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+		
 		//'tipo'
-		public Keyword getTipoKeyword_0() { return cTipoKeyword_0; }
+		public Keyword getTipoKeyword_1() { return cTipoKeyword_1; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+		public Keyword getEqualsSignKeyword_2() { return cEqualsSignKeyword_2; }
 		
 		//'VPC'
-		public Keyword getVPCKeyword_2() { return cVPCKeyword_2; }
+		public Keyword getVPCKeyword_3() { return cVPCKeyword_3; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_4() { return cSemicolonKeyword_4; }
 		
 		//'id'
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
+		public Keyword getIdKeyword_5() { return cIdKeyword_5; }
 		
 		//'='
-		public Keyword getEqualsSignKeyword_4() { return cEqualsSignKeyword_4; }
+		public Keyword getEqualsSignKeyword_6() { return cEqualsSignKeyword_6; }
 		
 		//nombre=EString
-		public Assignment getNombreAssignment_5() { return cNombreAssignment_5; }
+		public Assignment getNombreAssignment_7() { return cNombreAssignment_7; }
 		
 		//EString
-		public RuleCall getNombreEStringParserRuleCall_5_0() { return cNombreEStringParserRuleCall_5_0; }
+		public RuleCall getNombreEStringParserRuleCall_7_0() { return cNombreEStringParserRuleCall_7_0; }
+		
+		//';'
+		public Keyword getSemicolonKeyword_8() { return cSemicolonKeyword_8; }
+		
+		////'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+		////('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
+		////('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
+		////('internetgateway' internetgateway=[InternetGateway|EString])?
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class ServidorAplicacionesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.MyDsl.ServidorAplicaciones");
@@ -742,7 +647,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVpcKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Assignment cVpcAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final CrossReference cVpcVPCCrossReference_7_0 = (CrossReference)cVpcAssignment_7.eContents().get(0);
-		private final RuleCall cVpcVPCEStringParserRuleCall_7_0_1 = (RuleCall)cVpcVPCCrossReference_7_0.eContents().get(1);
+		private final RuleCall cVpcVPCIDTerminalRuleCall_7_0_1 = (RuleCall)cVpcVPCCrossReference_7_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ServidorAplicaciones:
@@ -750,13 +655,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 		//	sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
 		//	conexiones+=[Conexion|EString])* ')')?
-		//	'vpc' vpc=[VPC|EString]
+		//	'vpc' vpc=[VPC]
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ServidorAplicaciones' '{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 		//sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
-		//conexiones+=[Conexion|EString])* ')')? 'vpc' vpc=[VPC|EString] '}'
+		//conexiones+=[Conexion|EString])* ')')? 'vpc' vpc=[VPC] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'ServidorAplicaciones'
@@ -840,14 +745,14 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'vpc'
 		public Keyword getVpcKeyword_6() { return cVpcKeyword_6; }
 		
-		//vpc=[VPC|EString]
+		//vpc=[VPC]
 		public Assignment getVpcAssignment_7() { return cVpcAssignment_7; }
 		
-		//[VPC|EString]
+		//[VPC]
 		public CrossReference getVpcVPCCrossReference_7_0() { return cVpcVPCCrossReference_7_0; }
 		
-		//EString
-		public RuleCall getVpcVPCEStringParserRuleCall_7_0_1() { return cVpcVPCEStringParserRuleCall_7_0_1; }
+		//ID
+		public RuleCall getVpcVPCIDTerminalRuleCall_7_0_1() { return cVpcVPCIDTerminalRuleCall_7_0_1; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
@@ -2069,9 +1974,9 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Proveedor:
-	//	'Tipo' '=' nombre=EString
-	//	'parametroConexion' '=' parametroConexion=ParametroConexion ('ambientes' '=' '['
-	//	ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']')?;
+	//	'Tipo' '=' nombre=EString ';'
+	//	parametroConexion=ParametroConexion
+	//	'Ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ("," ambientesDespliegue+=AmbienteDespliegue)* ']';
 	public ProveedorElements getProveedorAccess() {
 		return pProveedor;
 	}
@@ -2081,11 +1986,13 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AmbienteDespliegue:
-	//	{AmbienteDespliegue}
-	//	'{' ('nombre' '=' nombre=NombreAmbiente)? ('recursos' '{' recursos+=Recurso ("," recursos+=Recurso)* '}')?
-	//	('conexiones' '{' conexiones+=Conexion ("," conexiones+=Conexion)* '}')? ('seguridad' '{'
-	//	seguridad+=MecanismoSeguridad ("," seguridad+=MecanismoSeguridad)* '}')? ('vpc' '=' '[' '{' vpc+=VPC ("," vpc+=VPC)*
-	//	'}')? ']'
+	//	'{'
+	//	'nombre' '=' nombre=NombreAmbiente ';'
+	//	'vpcs' '=' '[' vpc+=VPC ("," vpc+=VPC)* ']'
+	//	'recursos' '=' '[' recursos+=Recurso ("," recursos+=Recurso)* ']'
+	//	//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+	//	//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+	//
 	//	'}';
 	public AmbienteDespliegueElements getAmbienteDespliegueAccess() {
 		return pAmbienteDespliegue;
@@ -2097,9 +2004,8 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//UsuarioPassword:
 	//	{UsuarioPassword}
-	//	'UsuarioPassword'
-	//	'{' ('usuario' usuario=EString)? ('password' password=EString)?
-	//	'}';
+	//	'user' usuario=EString ';'
+	//	'password' password=EString ';';
 	public UsuarioPasswordElements getUsuarioPasswordAccess() {
 		return pUsuarioPassword;
 	}
@@ -2110,9 +2016,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Llave:
 	//	{Llave}
-	//	'Llave'
-	//	'{' ('secreto' secreto=EString)?
-	//	'}';
+	//	'secret' '=' secreto=EString ';';
 	public LlaveElements getLlaveAccess() {
 		return pLlave;
 	}
@@ -2133,7 +2037,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Conexion:
 	//	'Conexion'
-	//	'{' ('nombre' nombre=EString)?
+	//	'{' ('nombre' nombre=EString)? ';'
 	//	'recursos' '(' recursos+=[Recurso|EString] ("," recursos+=[Recurso|EString])* ')'
 	//	'}';
 	public ConexionElements getConexionAccess() {
@@ -2145,11 +2049,11 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VPC: //'VPC'
-	//	'tipo' '=' 'VPC' 'id' '=' nombre=EString //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
+	//	'{' 'tipo' '=' 'VPC' ';' 'id' '=' nombre=EString ';' //'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
 	//	//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
 	//	//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
 	//	//('internetgateway' internetgateway=[InternetGateway|EString])?
-	//;
+	//	'}';
 	public VPCElements getVPCAccess() {
 		return pVPC;
 	}
@@ -2173,7 +2077,7 @@ public class MyDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'{' ('nombre' nombre=EString)? ('tamanio' tamanio=TamanioServidor)? ('sistemaOperativo'
 	//	sistemaOperativo=SistemaOperativo)? ('conexiones' '(' conexiones+=[Conexion|EString] (","
 	//	conexiones+=[Conexion|EString])* ')')?
-	//	'vpc' vpc=[VPC|EString]
+	//	'vpc' vpc=[VPC]
 	//	'}';
 	public ServidorAplicacionesElements getServidorAplicacionesAccess() {
 		return pServidorAplicaciones;

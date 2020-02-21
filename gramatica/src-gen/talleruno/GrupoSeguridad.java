@@ -28,10 +28,6 @@ public interface GrupoSeguridad extends MecanismoSeguridad {
 	 * Returns the value of the '<em><b>Reglas Entrada</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.Regla}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reglas Entrada</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reglas Entrada</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getGrupoSeguridad_ReglasEntrada()
@@ -44,10 +40,6 @@ public interface GrupoSeguridad extends MecanismoSeguridad {
 	 * Returns the value of the '<em><b>Reglas Salida</b></em>' containment reference list.
 	 * The list contents are of type {@link talleruno.Regla}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reglas Salida</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reglas Salida</em>' containment reference list.
 	 * @see talleruno.GramaticaPackage#getGrupoSeguridad_ReglasSalida()
@@ -59,10 +51,6 @@ public interface GrupoSeguridad extends MecanismoSeguridad {
 	/**
 	 * Returns the value of the '<em><b>Descripcion</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Descripcion</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Descripcion</em>' attribute.
 	 * @see #setDescripcion(String)
@@ -84,18 +72,12 @@ public interface GrupoSeguridad extends MecanismoSeguridad {
 
 	/**
 	 * Returns the value of the '<em><b>Vpc</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link talleruno.VPC#getGruposeguridad <em>Gruposeguridad</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vpc</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vpc</em>' reference.
 	 * @see #setVpc(VPC)
 	 * @see talleruno.GramaticaPackage#getGrupoSeguridad_Vpc()
-	 * @see talleruno.VPC#getGruposeguridad
-	 * @model opposite="gruposeguridad" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	VPC getVpc();

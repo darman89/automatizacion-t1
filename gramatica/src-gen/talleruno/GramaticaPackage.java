@@ -865,49 +865,13 @@ public interface GramaticaPackage extends EPackage {
 	int VPC__NOMBRE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Recurso</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VPC__RECURSO = 1;
-
-	/**
-	 * The feature id for the '<em><b>Gruposeguridad</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VPC__GRUPOSEGURIDAD = 2;
-
-	/**
-	 * The feature id for the '<em><b>Subred</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VPC__SUBRED = 3;
-
-	/**
-	 * The feature id for the '<em><b>Internetgateway</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VPC__INTERNETGATEWAY = 4;
-
-	/**
 	 * The number of structural features of the '<em>VPC</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VPC_FEATURE_COUNT = 5;
+	int VPC_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>VPC</em>' class.
@@ -1628,50 +1592,6 @@ public interface GramaticaPackage extends EPackage {
 	EAttribute getVPC_Nombre();
 
 	/**
-	 * Returns the meta object for the reference list '{@link talleruno.VPC#getRecurso <em>Recurso</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Recurso</em>'.
-	 * @see talleruno.VPC#getRecurso()
-	 * @see #getVPC()
-	 * @generated
-	 */
-	EReference getVPC_Recurso();
-
-	/**
-	 * Returns the meta object for the reference list '{@link talleruno.VPC#getGruposeguridad <em>Gruposeguridad</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Gruposeguridad</em>'.
-	 * @see talleruno.VPC#getGruposeguridad()
-	 * @see #getVPC()
-	 * @generated
-	 */
-	EReference getVPC_Gruposeguridad();
-
-	/**
-	 * Returns the meta object for the reference list '{@link talleruno.VPC#getSubred <em>Subred</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Subred</em>'.
-	 * @see talleruno.VPC#getSubred()
-	 * @see #getVPC()
-	 * @generated
-	 */
-	EReference getVPC_Subred();
-
-	/**
-	 * Returns the meta object for the reference '{@link talleruno.VPC#getInternetgateway <em>Internetgateway</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Internetgateway</em>'.
-	 * @see talleruno.VPC#getInternetgateway()
-	 * @see #getVPC()
-	 * @generated
-	 */
-	EReference getVPC_Internetgateway();
-
-	/**
 	 * Returns the meta object for class '{@link talleruno.Subred <em>Subred</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2305,38 +2225,6 @@ public interface GramaticaPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VPC__NOMBRE = eINSTANCE.getVPC_Nombre();
-
-		/**
-		 * The meta object literal for the '<em><b>Recurso</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VPC__RECURSO = eINSTANCE.getVPC_Recurso();
-
-		/**
-		 * The meta object literal for the '<em><b>Gruposeguridad</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VPC__GRUPOSEGURIDAD = eINSTANCE.getVPC_Gruposeguridad();
-
-		/**
-		 * The meta object literal for the '<em><b>Subred</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VPC__SUBRED = eINSTANCE.getVPC_Subred();
-
-		/**
-		 * The meta object literal for the '<em><b>Internetgateway</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VPC__INTERNETGATEWAY = eINSTANCE.getVPC_Internetgateway();
 
 		/**
 		 * The meta object literal for the '{@link talleruno.impl.SubredImpl <em>Subred</em>}' class.

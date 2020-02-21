@@ -126,6 +126,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Conexion> getConexiones() {
 		if (conexiones == null) {
 			conexiones = new EObjectWithInverseResolvingEList.ManyInverse<Conexion>(
@@ -140,6 +141,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -149,6 +151,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(String newNombre) {
 		String oldNombre = nombre;
 		nombre = newNombre;
@@ -162,6 +165,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TamanioServidor getTamanio() {
 		return tamanio;
 	}
@@ -171,6 +175,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTamanio(TamanioServidor newTamanio) {
 		TamanioServidor oldTamanio = tamanio;
 		tamanio = newTamanio == null ? TAMANIO_EDEFAULT : newTamanio;
@@ -184,6 +189,7 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VPC getVpc() {
 		if (vpc != null && vpc.eIsProxy()) {
 			InternalEObject oldVpc = (InternalEObject) vpc;
@@ -211,41 +217,13 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVpc(VPC newVpc, NotificationChain msgs) {
+	@Override
+	public void setVpc(VPC newVpc) {
 		VPC oldVpc = vpc;
 		vpc = newVpc;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this,
-					Notification.SET, GramaticaPackage.RECURSO__VPC, oldVpc,
-					newVpc);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVpc(VPC newVpc) {
-		if (newVpc != vpc) {
-			NotificationChain msgs = null;
-			if (vpc != null)
-				msgs = ((InternalEObject) vpc).eInverseRemove(this,
-						GramaticaPackage.VPC__RECURSO, VPC.class, msgs);
-			if (newVpc != null)
-				msgs = ((InternalEObject) newVpc).eInverseAdd(this,
-						GramaticaPackage.VPC__RECURSO, VPC.class, msgs);
-			msgs = basicSetVpc(newVpc, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					GramaticaPackage.RECURSO__VPC, newVpc, newVpc));
+					GramaticaPackage.RECURSO__VPC, oldVpc, vpc));
 	}
 
 	/**
@@ -261,11 +239,6 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 		case GramaticaPackage.RECURSO__CONEXIONES:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getConexiones())
 					.basicAdd(otherEnd, msgs);
-		case GramaticaPackage.RECURSO__VPC:
-			if (vpc != null)
-				msgs = ((InternalEObject) vpc).eInverseRemove(this,
-						GramaticaPackage.VPC__RECURSO, VPC.class, msgs);
-			return basicSetVpc((VPC) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -282,8 +255,6 @@ public abstract class RecursoImpl extends MinimalEObjectImpl.Container
 		case GramaticaPackage.RECURSO__CONEXIONES:
 			return ((InternalEList<?>) getConexiones()).basicRemove(otherEnd,
 					msgs);
-		case GramaticaPackage.RECURSO__VPC:
-			return basicSetVpc(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

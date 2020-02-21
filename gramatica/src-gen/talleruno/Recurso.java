@@ -31,10 +31,6 @@ public interface Recurso extends EObject {
 	 * The list contents are of type {@link talleruno.Conexion}.
 	 * It is bidirectional and its opposite is '{@link talleruno.Conexion#getRecursos <em>Recursos</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Conexiones</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Conexiones</em>' reference list.
 	 * @see talleruno.GramaticaPackage#getRecurso_Conexiones()
@@ -47,10 +43,6 @@ public interface Recurso extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Nombre</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Nombre</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Nombre</em>' attribute.
 	 * @see #setNombre(String)
@@ -74,10 +66,6 @@ public interface Recurso extends EObject {
 	 * Returns the value of the '<em><b>Tamanio</b></em>' attribute.
 	 * The literals are from the enumeration {@link talleruno.TamanioServidor}.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tamanio</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tamanio</em>' attribute.
 	 * @see talleruno.TamanioServidor
@@ -101,18 +89,12 @@ public interface Recurso extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Vpc</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link talleruno.VPC#getRecurso <em>Recurso</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vpc</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vpc</em>' reference.
 	 * @see #setVpc(VPC)
 	 * @see talleruno.GramaticaPackage#getRecurso_Vpc()
-	 * @see talleruno.VPC#getRecurso
-	 * @model opposite="recurso" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	VPC getVpc();

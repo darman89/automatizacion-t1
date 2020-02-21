@@ -71,6 +71,7 @@ public abstract class MecanismoSeguridadImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getNombre() {
 		return nombre;
 	}
@@ -80,6 +81,7 @@ public abstract class MecanismoSeguridadImpl extends
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNombre(String newNombre) {
 		String oldNombre = nombre;
 		nombre = newNombre;

@@ -71,6 +71,7 @@ public class BaseDatosNoSQLImpl extends ServidorBaseDatosImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ManejadorNoSQL getManejador() {
 		return manejador;
 	}
@@ -80,6 +81,7 @@ public class BaseDatosNoSQLImpl extends ServidorBaseDatosImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setManejador(ManejadorNoSQL newManejador) {
 		ManejadorNoSQL oldManejador = manejador;
 		manejador = newManejador == null ? MANEJADOR_EDEFAULT : newManejador;

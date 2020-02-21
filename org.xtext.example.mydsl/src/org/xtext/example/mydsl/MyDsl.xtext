@@ -26,35 +26,32 @@ EString returns ecore::EString:
 	STRING | ID;
 
 Proveedor returns Proveedor:
-		'Tipo' '=' nombre=EString
-		'parametroConexion' '=' parametroConexion=ParametroConexion
-		('ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ( "," ambientesDespliegue+=AmbienteDespliegue)* ']' )?
+		'Tipo' '=' nombre=EString ';'
+		parametroConexion=ParametroConexion
+		'Ambientes' '=' '[' ambientesDespliegue+=AmbienteDespliegue ( "," ambientesDespliegue+=AmbienteDespliegue)* ']'
 	;
 
 AmbienteDespliegue returns AmbienteDespliegue:
-	{AmbienteDespliegue}
 	'{'
-		('nombre' '=' nombre=NombreAmbiente)?
-		('recursos' '{' recursos+=Recurso ( "," recursos+=Recurso)* '}' )?
-		('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
-		('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
-		('vpc' '=' '[' '{' vpc+=VPC ( "," vpc+=VPC)* '}' )? ']'
+		'nombre' '=' nombre=NombreAmbiente ';'
+		'vpcs' '=' '[' vpc+=VPC ( "," vpc+=VPC)* ']'
+		'recursos' '=' '[' recursos+=Recurso ( "," recursos+=Recurso)* ']'
+		//('conexiones' '{' conexiones+=Conexion ( "," conexiones+=Conexion)* '}' )?
+		//('seguridad' '{' seguridad+=MecanismoSeguridad ( "," seguridad+=MecanismoSeguridad)* '}' )?
+		
 	'}';
 
 UsuarioPassword returns UsuarioPassword:
 	{UsuarioPassword}
-	'UsuarioPassword'
-	'{'
-		('usuario' usuario=EString)?
-		('password' password=EString)?
-	'}';
+	
+		'user' usuario=EString ';'
+		'password' password=EString ';'
+	;
 
 Llave returns Llave:
 	{Llave}
-	'Llave'
-	'{'
-		('secreto' secreto=EString)?
-	'}';
+			'secret' '=' secreto=EString ';'
+	;
 
 enum NombreAmbiente returns NombreAmbiente:
 				DESARROLLO = 'DESARROLLO' | PRUEBAS = 'PRUEBAS' | QA = 'QA' | PRODUCCION = 'PRODUCCION';
@@ -62,18 +59,20 @@ enum NombreAmbiente returns NombreAmbiente:
 Conexion returns Conexion:
 	'Conexion'
 	'{'
-		('nombre' nombre=EString)?
+		('nombre' nombre=EString)? ';'
 		'recursos' '(' recursos+=[Recurso|EString] ( "," recursos+=[Recurso|EString])* ')' 
 	'}';
 
 VPC returns VPC:
 	//'VPC'
-		'tipo' '=' 'VPC'
-		'id' '=' nombre=EString
+	'{' 
+		'tipo' '=' 'VPC' ';'
+		'id' '=' nombre=EString ';'
 		//'recurso' '(' recurso+=[Recurso|EString] ( "," recurso+=[Recurso|EString])* ')' 
 		//('gruposeguridad' '(' gruposeguridad+=[GrupoSeguridad|EString] ( "," gruposeguridad+=[GrupoSeguridad|EString])* ')' )?
 		//('subred' '(' subred+=[Subred|EString] ( "," subred+=[Subred|EString])* ')' )?
 		//('internetgateway' internetgateway=[InternetGateway|EString])?
+		'}' 
 	;
 
 enum TamanioServidor returns TamanioServidor:

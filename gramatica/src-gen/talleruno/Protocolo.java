@@ -41,10 +41,6 @@ public enum Protocolo implements Enumerator {
 	/**
 	 * The '<em><b>TCP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>TCP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TCP
 	 * @model
@@ -56,10 +52,6 @@ public enum Protocolo implements Enumerator {
 	/**
 	 * The '<em><b>UDP</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>UDP</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #UDP
 	 * @model
@@ -171,6 +163,7 @@ public enum Protocolo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -180,6 +173,7 @@ public enum Protocolo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -189,6 +183,7 @@ public enum Protocolo implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 		return literal;
 	}

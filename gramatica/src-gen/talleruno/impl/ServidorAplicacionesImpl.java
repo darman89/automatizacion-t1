@@ -71,6 +71,7 @@ public class ServidorAplicacionesImpl extends RecursoImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SistemaOperativo getSistemaOperativo() {
 		return sistemaOperativo;
 	}
@@ -80,6 +81,7 @@ public class ServidorAplicacionesImpl extends RecursoImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSistemaOperativo(SistemaOperativo newSistemaOperativo) {
 		SistemaOperativo oldSistemaOperativo = sistemaOperativo;
 		sistemaOperativo = newSistemaOperativo == null ? SISTEMA_OPERATIVO_EDEFAULT

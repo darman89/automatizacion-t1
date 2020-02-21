@@ -151,6 +151,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Proveedor createProveedor() {
 		ProveedorImpl proveedor = new ProveedorImpl();
 		return proveedor;
@@ -161,6 +162,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UsuarioPassword createUsuarioPassword() {
 		UsuarioPasswordImpl usuarioPassword = new UsuarioPasswordImpl();
 		return usuarioPassword;
@@ -171,6 +173,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Llave createLlave() {
 		LlaveImpl llave = new LlaveImpl();
 		return llave;
@@ -181,6 +184,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AmbienteDespliegue createAmbienteDespliegue() {
 		AmbienteDespliegueImpl ambienteDespliegue = new AmbienteDespliegueImpl();
 		return ambienteDespliegue;
@@ -191,6 +195,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServidorAplicaciones createServidorAplicaciones() {
 		ServidorAplicacionesImpl servidorAplicaciones = new ServidorAplicacionesImpl();
 		return servidorAplicaciones;
@@ -201,6 +206,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ServidorAlmacenamiento createServidorAlmacenamiento() {
 		ServidorAlmacenamientoImpl servidorAlmacenamiento = new ServidorAlmacenamientoImpl();
 		return servidorAlmacenamiento;
@@ -211,6 +217,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Conexion createConexion() {
 		ConexionImpl conexion = new ConexionImpl();
 		return conexion;
@@ -221,6 +228,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BaseDatosSQL createBaseDatosSQL() {
 		BaseDatosSQLImpl baseDatosSQL = new BaseDatosSQLImpl();
 		return baseDatosSQL;
@@ -231,6 +239,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BaseDatosNoSQL createBaseDatosNoSQL() {
 		BaseDatosNoSQLImpl baseDatosNoSQL = new BaseDatosNoSQLImpl();
 		return baseDatosNoSQL;
@@ -241,6 +250,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InternetGateway createInternetGateway() {
 		InternetGatewayImpl internetGateway = new InternetGatewayImpl();
 		return internetGateway;
@@ -251,6 +261,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VPC createVPC() {
 		VPCImpl vpc = new VPCImpl();
 		return vpc;
@@ -261,6 +272,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Subred createSubred() {
 		SubredImpl subred = new SubredImpl();
 		return subred;
@@ -271,6 +283,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GrupoSeguridad createGrupoSeguridad() {
 		GrupoSeguridadImpl grupoSeguridad = new GrupoSeguridadImpl();
 		return grupoSeguridad;
@@ -281,6 +294,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Regla createRegla() {
 		ReglaImpl regla = new ReglaImpl();
 		return regla;
@@ -291,6 +305,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Infraestructura createInfraestructura() {
 		InfraestructuraImpl infraestructura = new InfraestructuraImpl();
 		return infraestructura;
@@ -451,6 +466,7 @@ public class GramaticaFactoryImpl extends EFactoryImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GramaticaPackage getGramaticaPackage() {
 		return (GramaticaPackage) getEPackage();
 	}

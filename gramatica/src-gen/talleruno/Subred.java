@@ -24,10 +24,6 @@ public interface Subred extends MecanismoSeguridad {
 	/**
 	 * Returns the value of the '<em><b>CIDR</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>CIDR</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>CIDR</em>' attribute.
 	 * @see #setCIDR(String)
@@ -50,10 +46,6 @@ public interface Subred extends MecanismoSeguridad {
 	/**
 	 * Returns the value of the '<em><b>Zona Disponibilidad</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Zona Disponibilidad</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Zona Disponibilidad</em>' attribute.
 	 * @see #setZonaDisponibilidad(String)
@@ -75,18 +67,12 @@ public interface Subred extends MecanismoSeguridad {
 
 	/**
 	 * Returns the value of the '<em><b>Vpc</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link talleruno.VPC#getSubred <em>Subred</em>}'.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Vpc</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vpc</em>' reference.
 	 * @see #setVpc(VPC)
 	 * @see talleruno.GramaticaPackage#getSubred_Vpc()
-	 * @see talleruno.VPC#getSubred
-	 * @model opposite="subred" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	VPC getVpc();

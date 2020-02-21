@@ -61,10 +61,6 @@ public enum ManejadorSQL implements Enumerator {
 	/**
 	 * The '<em><b>POSTGRESQL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>POSTGRESQL</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #POSTGRESQL
 	 * @model
@@ -76,10 +72,6 @@ public enum ManejadorSQL implements Enumerator {
 	/**
 	 * The '<em><b>MYSQL</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>MYSQL</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MYSQL
 	 * @model
@@ -91,10 +83,6 @@ public enum ManejadorSQL implements Enumerator {
 	/**
 	 * The '<em><b>ORACLE</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>ORACLE</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ORACLE
 	 * @model
@@ -106,10 +94,6 @@ public enum ManejadorSQL implements Enumerator {
 	/**
 	 * The '<em><b>SQLSERVER</b></em>' literal value.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of '<em><b>SQLSERVER</b></em>' literal object isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #SQLSERVER
 	 * @model
@@ -226,6 +210,7 @@ public enum ManejadorSQL implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getValue() {
 		return value;
 	}
@@ -235,6 +220,7 @@ public enum ManejadorSQL implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -244,6 +230,7 @@ public enum ManejadorSQL implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLiteral() {
 		return literal;
 	}

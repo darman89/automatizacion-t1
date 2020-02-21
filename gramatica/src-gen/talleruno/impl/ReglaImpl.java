@@ -155,6 +155,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getTipo() {
 		return tipo;
 	}
@@ -164,6 +165,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTipo(String newTipo) {
 		String oldTipo = tipo;
 		tipo = newTipo;
@@ -177,6 +179,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Protocolo getProtocolo() {
 		return protocolo;
 	}
@@ -186,6 +189,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocolo(Protocolo newProtocolo) {
 		Protocolo oldProtocolo = protocolo;
 		protocolo = newProtocolo == null ? PROTOCOLO_EDEFAULT : newProtocolo;
@@ -199,6 +203,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getPuerto() {
 		return puerto;
 	}
@@ -208,6 +213,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPuerto(int newPuerto) {
 		int oldPuerto = puerto;
 		puerto = newPuerto;
@@ -221,6 +227,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getOrigen() {
 		return origen;
 	}
@@ -230,6 +237,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrigen(String newOrigen) {
 		String oldOrigen = origen;
 		origen = newOrigen;
@@ -243,6 +251,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDescripcion() {
 		return descripcion;
 	}
@@ -252,6 +261,7 @@ public class ReglaImpl extends MinimalEObjectImpl.Container implements Regla {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDescripcion(String newDescripcion) {
 		String oldDescripcion = descripcion;
 		descripcion = newDescripcion;

@@ -22,10 +22,6 @@ public interface ServidorAlmacenamiento extends Recurso {
 	/**
 	 * Returns the value of the '<em><b>Tamanio Inicial</b></em>' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Tamanio Inicial</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tamanio Inicial</em>' attribute.
 	 * @see #setTamanioInicial(int)
